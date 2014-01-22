@@ -23,7 +23,7 @@
 
 \title{NSA, Prism und co - Wie schützt man sich vor Überwachung?}
 \author{\small Marius Melzer \& Stephan Thamm\\\large Chaos Computer Club Dresden}
-\date{16.10.2013}
+\date{22.01.2014}
 
 \begin{document}
 \maketitle
@@ -56,15 +56,161 @@
     \end{itemize}
 \end{frame}
 
-%\ MORE STUFF
+\begin{frame}
+    \frametitle{Bundespräsident Gauck zur NSA-Überwachung}
+    \begin{center}
+      "`Wir wissen z.B., dass es nicht so ist, wie bei der Stasi und dem KGB, dass es dicke Aktenbände gibt, wo unsere Gesprächsinhalte alle aufgeschrieben und schön abgeheftet sind. Das ist es nicht."'
+      \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Stasi vs. NSA}
+    \includegraphics[height=0.7\textheight]{img/akten1.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Stasi vs. NSA}
+    \includegraphics[height=0.7\textheight]{img/akten2.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Merkels Handy}
+    \includegraphics[height=0.7\textheight]{img/heise-merkel.png}
+\end{frame}
 
 \section{Staaten}
 \subsection{}
 
-%\ MORE STUFF
+\begin{frame}
+  \begin{center}\Large
+    Staatliche Überwachung
+  \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Tempora}
+    \includegraphics[height=0.7\textheight]{img/spiegel-tempora.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Verschlüsselung}
+    \begin{itemize}
+      \item<2-> symetrische Verschlüsselung
+      \item<3-> asymetrische Verschlüsselung
+      \item<4-> Woher kommt Vertrauen?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{SSL / TLS}
+    \begin{itemize}
+      \item<2-> eingesetzt im Web, Mail, ...
+      \item<3-> hierarchische Struktur
+      \item<4-> gespeicherte Liste von vertrauenswürdigen Zertifikaten
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Emailverschlüsselung}
+    \begin{itemize}\Large
+      \item GPG / PGP
+      \item Thunderbird: Gpg4win
+      \item Outlook: Gpg4win
+      \item Web: Mailvelope (Firefox, Chrome)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Von Firefox vertraute Zertifikate}
+    \begin{center}
+      \includegraphics[height=5cm]{img/zertifikate.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{HTTPS Everywhere}
+    \begin{center}
+      \includegraphics[height=5cm]{img/https-everywhere.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Vorratsdatenspeicherung (Deutschland)}
+    \begin{center}
+      \includegraphics[height=5cm]{img/zeit-vds.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Vorratsdatenspeicherung (USA)}
+    \begin{center}
+      \includegraphics[height=5cm]{img/netzpolitik-verizon.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Metadaten}
+  \begin{itemize}
+    \item<2-> Handynetz
+      \begin{itemize}
+        \item<3-> Telefonnummern
+        \item<4-> Zeitpunkt und Dauer (Telefonate, SMS)
+        \item<5-> Funkzelle (Ort)
+      \end{itemize}
+    \item<6->Internet
+      \begin{itemize}
+        \item<3-> IP-Adresse
+        \item<4-> Alle Verbindungen
+        \item<5-> Email: Adressen von Sender und Empfänger, Zugriff
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Metadaten}
+    \begin{center}
+      \includegraphics[height=5cm]{img/netzpolitik-verizon.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Metadaten}
+    \includegraphics[height=0.7\textheight]{img/maltespitz.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Prism}
+    \includegraphics[height=0.7\textheight]{img/prism.jpg}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Gegenmaßnahme zu Prism}
+  \begin{itemize}
+    \item<2-> Dezentrale Dienste:
+      \begin{itemize}
+        \item<3-> Email
+        \item<4-> Jabber
+        \item<5-> palava.tv
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Zusammenfassung Staaten}
+  \begin{itemize}
+    \item Staaten wollen Kontrolle, ggf. Daten verkaufen
+    \item Gegenmaßnahmen: Verschlüsselung, Tor, dezentrale Dienste
+  \end{itemize}
+\end{frame}
 
 \section{Unternehmen}
 \subsection{}
+
+\begin{frame}
+  \begin{center}\Large
+    Überwachung durch Unternehmen
+  \end{center}
+\end{frame}
 
 \begin{frame}
     \frametitle{Geschäftsmodelle I}
@@ -118,6 +264,12 @@
 
 \section{Mitmenschen}
 \subsection{}
+
+\begin{frame}
+  \begin{center}\Large
+    Überwachung durch andere Menschen
+  \end{center}
+\end{frame}
 
 \begin{frame}
     \frametitle{Soziale Netzwerke}
