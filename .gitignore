@@ -32,3 +32,4 @@
 *.tdo
 *.swp
 out
+img/*.pdf
