@@ -1,0 +1,210 @@
+\documentclass[12pt]{beamer}
+%\documentclass[20pt,handout]{beamer}
+\usetheme{Darmstadt}
+\usepackage{graphicx}
+%\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\setbeamertemplate{footline}[frame number]
+
+\newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}}
+\usepackage{ifthen}
+\newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
+\usepackage{textcomp}
+
+\pgfdeclareimage[height=.6cm]{c3d2logo}{./img/c3d2.pdf} 
+
+
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{main,foreground}
+\logo{\pgfputat{\pgfxy(-1,0)}{\pgfbox[center,base]{\pgfuseimage{c3d2logo}}}}
+
+
+\title{Chancen und Gefahren des Internets}
+\author{\small Bernhard Franke \& Marius Melzer\\\large Chaos Computer Club Dresden}
+\date{24.03.2014}
+
+\begin{document}
+\maketitle
+
+\section{Einleitung}
+\subsection{}
+
+\begin{frame}
+  \frametitle{Wer sind wir?}
+  \begin{itemize}
+    \item<1-> Chaos Computer Club Dresden (\url{http://c3d2.de})
+        \note{}
+    \item<2-> Datenspuren: 13./14.09. 2014 \url{http://datenspuren.de}
+    \item<3-> Podcasts (\url{http://pentamedia.org})
+    \item<4-> Chaos macht Schule
+  \end{itemize}
+\end{frame}
+
+\section{Gefahren}
+\subsection{}
+
+\begin{frame}
+  \frametitle{Gefahren}
+  \begin{itemize}
+    \item<2-> Kontrollverlust über eigene Daten
+    \item<3-> Identitätsdiebstahl
+    \item<4-> Unerwünschte Inhalte
+    \item<5-> Cybermobbing
+    \item<6-> Urheberrechtsverletzungen
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Kontrollverlust über eigene Daten}
+  \begin{itemize}
+    \item<2-> Alles, auch jeder Websiteaufruf, ist eine Kopie
+    \item<3-> => Das Internet vergisst nichts 
+    \item<4-> Beispiel 1: archive.org
+    \item<5-> Beispiel 2: NSA \& co
+    \item<6-> Nicht unwahrscheinlich, dass eigene Daten in Jahren oder Jahrzehnten noch abrufbar/vorhanden sind
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Geschäftsmodelle}
+  \begin{itemize}
+    \item<2-> Daten haben einen Wert
+    \item<3-> Womit verdienen folgende Firmen ihr Geld?
+      \begin{itemize}
+        \item<4-> Karstadt
+        \item<5-> Amazon
+        \item<6-> Ebay
+        \item<7-> Facebook
+      \end{itemize}
+      \item<8-> Werbung verkauft sich personalisiert besser -> Personalisieren durch Tracking
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Gegenmaßnahme: Datensparsamkeit}
+  \begin{itemize}
+      \item<2-> Viele Daten zusammen ergeben Profile
+      \item<3-> Werden die Daten gebraucht?
+      \item<4-> Werden echte Daten gebraucht?
+          \begin{itemize}
+            \item<5-> Pseudonymität
+            \item<6-> mailinator.com (Wegwerf-Email-Adresse)
+            \item<7-> frank-geht-ran.de (Wegwerf-Telefonnummer)
+            \item<8-> bugmenot.com (Fake Accounts)
+          \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Identitätsdiebstahl: Passwörter}
+    \begin{itemize}
+        \item<2-> Keine einfachen Wörter
+        \item<3-> Groß-, Kleinbuchstaben, Ziffern, Sonderzeichen
+        \item<4-> Beispiele:
+            \begin{itemize}
+                \item<5-> dragon
+                \item<6-> (nCuAj.§Tsm!f
+                \item<7-> IchLiebeDich
+                \item<8-> .§)=")=`
+                \item<10-> qwerty
+                \item<11-> Mks?o/.u,1Psw!
+            \end{itemize}
+        \item<12-> Verschiedene Passwörter nutzen!
+        \item<13-> Passwort-Manager verwenden \\ (z.B. Keepass, Password Safe)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Unerwünschte Inhalte}
+  \begin{itemize}
+    \item<2-> Filter sind einfach zu umgehen
+    \item<3-> Keine technische Lösung für soziale Probleme
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Cybermobbing}
+  \begin{itemize}
+    \item<2-> Kein großer Unterschied zu "normalem Mobbing"
+    \item<3-> Nicht ignorieren, Lehrer und Schule können ggf. helfen
+    \item<4-> EU-Programm: Klicksafe
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Urheberrecht I}
+  \begin{itemize}
+    \item<2-> Streaming im Graubereich
+    \item<3-> "Peer-to-Peer" (z.B. Bittorrent) interessante Technologie, aber Nutzer transparent und Problem des Weiterverteilens
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Urheberrecht II}
+  \begin{itemize}
+    \item<2-> Alle eigenen Werke in Deutschland urheberrechtlich geschützt
+    \item<3-> Public Domain und Creative Commons Lizenzen
+    \item<4-> https://search.creativecommons.org
+  \end{itemize}
+\end{frame}
+
+\section{Chancen}
+\subsection{}
+
+\begin{frame}
+  \frametitle{Chancen}
+  \begin{itemize}
+    \item<2-> Internetnutzer ist nicht nur konsument, sondern auch Produzent
+    \item<3-> Gigantische Wissensquelle
+    \item<4-> Kommunikation, auch über Länder- und Kontinentgrenzen hinweg
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Internet als Wissensquelle: Wikipedia}
+  \begin{itemize}
+    \item<2-> Gemeinschaftlich aggregiertes Weltwissen
+    \item<3-> ...unter freien Lizenzen
+    \item<4-> Man kann sich selbst einbringen
+    \item<5-> Besser als der Brockhaus?
+    \item<6-> Keine "Quelle", aber mit Quellen hinterlegt
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Internet als Wissensquelle: OpenStreetMap}
+  \begin{itemize}
+    \item<2-> Gemeinschaftlich aggregierte Weltkarte
+    \item<3-> ...unter freier Lizenz
+    \item<4-> Man kann sich selbst einbringen
+    \item<5-> Detaillierter als Google Maps?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Internet als Wissensquelle: Nachrichten}
+  \begin{itemize}
+    \item<2-> Nachrichten auf Abruf
+    \item<3-> Beispiele: tageschau.de, Zeit Online, Spiegel Online
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Internet als Kommunikationsmedium}
+  \begin{itemize}
+    \item<2-> Soziale Netzwerke sind im Grunde etwas Gutes
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Diskussion}
+    \begin{center} {\Large Diskussion}\\Bernhard Franke und Marius Melzer\\CMS Dresden: schule@c3d2.de \end{center}
+    \begin{center}
+      \href{https://creativecommons.org/licenses/by-sa/4.0/}{\cc{by-sa}} \\
+      \href{}{\textcolor{blue}{Folien}} vom Chaos Computer Club Dresden
+    \end{center}
+\end{frame}
+
+\end{document}
