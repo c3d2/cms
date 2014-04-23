@@ -25,12 +25,12 @@
 
 \title{NSA, Prism und co - Wie schützt man sich vor Überwachung?}
 \author{\small Marius Melzer\\\large Chaos Computer Club Dresden}
-\date{26.11.2013}
+\date{23.04.2014}
 
 \begin{document}
 \maketitle
 
-\section{Einleitung}
+\section{CCC}
 \subsection{}
 
 \begin{frame}
@@ -52,11 +52,14 @@
     \begin{itemize}
       \item<1-> Chaos Computer Club Dresden (\url{http://c3d2.de})
           \note{}
-      \item<2-> Datenspuren: Herbst 2014 \url{http://datenspuren.de}
+      \item<2-> Datenspuren: 13./14.09.2014 \url{http://datenspuren.de}
       \item<3-> Podcasts (\url{http://pentamedia.de})
       \item<4-> Chaos macht Schule
     \end{itemize}
 \end{frame}
+
+\section{Datenschutz}
+\subsection{}
 
 \begin{frame}
     \frametitle{Bundespräsident Gauck zur NSA-Überwachung}
@@ -91,12 +94,9 @@
       \item<5-> Staat, Geheimdienste
         \begin{itemize}
           \item<6-> Terrorismusbekämpfung? Kinderpornographie?
-          \item<7-> Macht
+          \item<7-> => Kontrolle, Wirtschaftsspionage
         \end{itemize}
       \item<8->Meine Mitmenschen
-        \begin{itemize}
-          \item<9-> ?
-      \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -107,6 +107,9 @@
       \item<2-> Verhalten
     \end{itemize}
 \end{frame}
+
+\section{Kommunikation}
+\subsection{}
 
 \begin{frame}
     \frametitle{Wie kommunizieren wir im Internet?}
@@ -143,14 +146,21 @@
     \end{center}
 \end{frame}
 
-\section{Angriff von außen}
-\subsection{}
-
 \begin{frame}
     \frametitle{Was ist zu schützen?}
     \begin{center}
       \includegraphics[height=5cm]{img/fed-bad-guy.png}
     \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Tempora}
+    \includegraphics[height=0.7\textheight]{img/spiegel-tempora.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Prism}
+    \includegraphics[height=0.7\textheight]{img/prism.jpg}
 \end{frame}
 
 \begin{frame}
@@ -160,10 +170,13 @@
     \end{center}
 \end{frame}
 
+\section{Geräte}
+\subsection{}
+
 \begin{frame}
     \frametitle{Wie schütze ich meinen Computer?}
     \begin{itemize}
-      \item Virenscanner
+      \item (Virenscanner)
       \item Firewall
       \item Aktuelle und vertrauenswürdige Software
     \end{itemize}
@@ -175,6 +188,7 @@
       \item Permissions
       \item Firewall (z.B. AFwall+: https://f-droid.org/repository/browse/?fdid=dev.ukanth.ufirewall)
       \item Aktuelle und vertrauenswürdige Software
+      \item Alternativer Appstore: f-droid.org
     \end{itemize}
 \end{frame}
 
@@ -194,51 +208,31 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Open Source Software für den PC}
+    \frametitle{Freie Software}
     \begin{itemize}
       \item Firefox
       \item Thunderbird
-      \item Libreoffice
+      \item LibreOffice
+      \item Pidgin
+      \item Evince/Okular
       \item Gimp
-      \item Blender
+      \item VLC
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Open Source Betriebssysteme für den PC}
-    \begin{itemize}
-      \item Linux-Distributionen (Ubuntu, Linux Mint)
-        \begin{itemize}
-          \item Wine
-      \end{itemize}
-      \item BSD
-    \end{itemize}
+    \frametitle{Freie Software}
+    \includegraphics[height=0.7\textheight]{img/gnome.png}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Linux mit Gnome}
-    \begin{center}
-      \includegraphics[height=0.7\textheight]{img/gnome.png}
-    \end{center}
+    \frametitle{Freie Software}
+    \includegraphics[height=0.7\textheight]{img/prism-break1.png}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Open Source Betriebssysteme fürs Handy}
-    \begin{itemize}
-      \item Cyanogenmod (http://cyanogenmod.org/)
-      \item Replicant (http://replicant.us/)
-      \item Firefox OS (http://www.mozilla.org/de/firefox/os/) - hat Web Apps
-      \item Sailfish OS (https://sailfishos.org/) - kann Android Apps
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Open Source Software fürs Smartphone}
-    \begin{itemize}
-      \item Market: F-Droid (https://f-droid.org)
-      \item Firefox
-      \item ...
-    \end{itemize}
+    \frametitle{Freie Software}
+    \includegraphics[height=0.7\textheight]{img/prism-break2.png}
 \end{frame}
 
 \begin{frame}
@@ -249,6 +243,9 @@
     \end{itemize}
 \end{frame}
 
+\section{Verschlüsselung I}
+\subsection{}
+
 \begin{frame}
     \frametitle{Was ist zu schützen?}
     \begin{center}
@@ -257,51 +254,75 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Schützen der Verbindung}
-    \begin{itemize}
-      \item Vertraulichkeit
-      \item Integrität
-      \item Anonymität
-    \end{itemize}
+    \frametitle{Verschlüsselung: Analogie}
+    \includegraphics[height=0.7\textheight]{img/bote.jpg}
+    {\\ \small \href{http://commons.wikimedia.org/wiki/File:Reitbote.jpg}{Grafik}: \href{http://creativecommons.org/licenses/by-sa/2.5/deed.en}{\cc{by-sa}} Ronald Preuss}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Verschlüsselung}
-    \begin{itemize}
-      \item<2-> symetrische Verschlüsselung
-      \item<3-> asymetrische Verschlüsselung
-      \item<4-> Woher kommt Vertrauen?
-    \end{itemize}
+    \frametitle{Verschlüsselung: Asymmetrische}
+    \includegraphics[height=0.7\textheight]<2->{img/asym_encryption.png}
 \end{frame}
 
 \begin{frame}
     \frametitle{SSL / TLS}
     \begin{itemize}
-      \item<2-> eingesetzt im Web, Mail, ...
-      \item<3-> hierarchische Struktur
-      \item<4-> gespeicherte Liste von vertrauenswürdigen Zertifikaten
+      \item<2-> SSL = Secure Socket Layer
+      \item<3-> eingesetzt im Web, Mail, ...
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Von Firefox vertraute Zertifikate}
+    \frametitle{SSL im Browser}
+    \includegraphics[height=0.7\textheight]{img/ssl_verified.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{SSL im Browser}
+    \includegraphics[height=0.7\textheight]{img/ssl_special.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{SSL im Browser}
+    \includegraphics[height=0.7\textheight]{img/ssl_unverified.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Zertifizierungsstellen}
     \begin{center}
-      \includegraphics[height=5cm]{img/zertifikate.png}
+      \includegraphics[height=5cm]<2->{img/zertifikate.png}
     \end{center}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Anonymität}
+  \frametitle{HTTPS Everywhere}
     \begin{center}
-      \includegraphics[height=5cm]{img/anonymous.jpg}
-      \\{\small \href{http://www.flickr.com/photos/70857039@N00/2255718951}{Foto}: \href{http://creativecommons.org/licenses/by-sa/2.0/deed.ru}{\cc{by-sa}} Vincent Diamante}
+      \includegraphics[height=5cm]{img/https-everywhere.png}
+    \end{center}
+\end{frame}
+
+\section{Anonymität}
+\subsection{}
+
+\begin{frame}
+  \frametitle{Vorratsdatenspeicherung (USA)}
+    \begin{center}
+      \includegraphics[height=5cm]{img/netzpolitik-verizon.png}
     \end{center}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Metadaten}
-    \includegraphics[height=0.7\textheight]{img/socialgraph.jpg}
-    \\{\small \href{http://www.flickr.com/photos/michaelgallagher/5076994408/}{Grafik}: \href{http://creativecommons.org/licenses/by-sa/2.0/}{\cc{by-sa}} Michael Sean Gallagher}
+  \frametitle{Vorratsdatenspeicherung (Deutschland)}
+    \begin{center}
+      \includegraphics[height=5cm]{img/tagesschau-vds.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Metadaten}
+    \begin{center}
+      \includegraphics[height=5cm]{img/metadaten_studie.png}
+    \end{center}
 \end{frame}
 
 \begin{frame}
@@ -310,41 +331,37 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{TOR}
+    \frametitle{Tor}
     \includegraphics[height=0.7\textheight]{img/tor1.png}
     \\{\small \href{https://www.torproject.org/images/htw1.png}{Grafik}: \href{https://creativecommons.org/licenses/by/3.0/us/}{\cc{by}} The Tor Project}
 \end{frame}
 
 \begin{frame}
-    \frametitle{TOR}
+    \frametitle{Tor}
     \includegraphics[height=0.7\textheight]{img/tor2.png}
     \\{\small \href{https://www.torproject.org/images/htw2.png}{Grafik}: \href{https://creativecommons.org/licenses/by/3.0/us/}{\cc{by}} The Tor Project}
 \end{frame}
 
 \begin{frame}
-    \frametitle{TOR}
+    \frametitle{Tor}
     \includegraphics[height=0.7\textheight]{img/tor3.png}
     \\{\small \href{https://www.torproject.org/images/htw3.png}{Grafik}: \href{https://creativecommons.org/licenses/by/3.0/us/}{\cc{by}} The Tor Project}
 \end{frame}
 
 \begin{frame}
-    \frametitle{TOR}
-    \includegraphics[height=0.7\textheight]{img/vidalia.png}
+  \frametitle{Tor}
+  \includegraphics[height=0.5\textheight]{img/tor-banner.png}
 \end{frame}
 
 \begin{frame}
-    \frametitle{TOR}
-    \begin{center} \Large Bridges \end{center}
+    \frametitle{Zensur}
+    \includegraphics[height=0.7\textheight]{img/zensur.png}
+    \\{\small \href{http://upload.wikimedia.org/wikipedia/commons/5/51/RWB-PressFreedomIndex2013-WorldMap.svg}{Grafik}: \href{http://creativecommons.org/licenses/by-sa/3.0/deed.en}{\cc{by-sa}} Jeff Ogden (W163)}
 \end{frame}
 
 \begin{frame}
-    \frametitle{TOR}
-    \includegraphics[height=0.7\textheight]{img/bridge1.png}
-\end{frame}
-
-\begin{frame}
-    \frametitle{TOR}
-    \includegraphics[height=0.7\textheight]{img/bridge2.png}
+    \frametitle{Tor in der Türkei}
+    \includegraphics[height=0.7\textheight]{img/tor-tuerkei.jpg}
 \end{frame}
 
 \begin{frame}
@@ -353,10 +370,13 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Zensur}
-    \includegraphics[height=0.7\textheight]{img/zensur.png}
-    \\{\small \href{http://upload.wikimedia.org/wikipedia/commons/5/51/RWB-PressFreedomIndex2013-WorldMap.svg}{Grafik}: \href{http://creativecommons.org/licenses/by-sa/3.0/deed.en}{\cc{by-sa}} Jeff Ogden (W163)}
+    \frametitle{Zusammenfassung}
+    \begin{itemize}
+      \item SSL nutzen (mit HTTPS Everywhere)
+      \item Anonymität wahren (mit Tor)
+    \end{itemize}
 \end{frame}
+
 
 \begin{frame}
     \frametitle{Was ist zu schützen?}
@@ -372,7 +392,7 @@
     \end{center}
 \end{frame}
 
-\section{Angriff von innen}
+\section{Unternehmen}
 \subsection{}
 
 \begin{frame}
@@ -389,73 +409,84 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Unterscheidung}
+    \frametitle{Ich will etwas vom Server I}
+    \begin{center} 
+        \includegraphics[height=0.5\textheight]{img/disconnect.png} \\
+        \Large Disconnect.me 
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Ich will etwas vom Server II}
     \begin{itemize}
-      \item<2-> Ich will etwas vom Server
-        \begin{itemize}
-          \item<3-> Cookies
-          \item<4-> => Third-Party-Cookies ausschalten
-          \item<5-> => Cookies nach Session löschen
-          \item<6-> Zähl-/Tracking-Pixel, ...
-          \item<7-> => Ghostery
-          \item<8-> => TOR
-        \end{itemize}
+      \item<2-> Datensparsamkeit
+      \item<3-> Werden echte Daten gebraucht?
+          \begin{itemize}
+            \item<4-> Pseudonymität
+            \item<5-> mailinator.com (Wegwerf-Email-Adresse)
+            \item<6-> frank-geht-ran.de (Wegwerf-Telefonnummer)
+            \item<7-> bugmenot.com (Fake Accounts)
+          \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Unterscheidung}
-    \begin{itemize}
-      \item<2-> Ich will etwas vom Server
-        \begin{itemize}
-          \item<3-> Pseudonymität
-          \item<4-> Daten ausdenken
-          \item<5-> Mailinator
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Unterscheidung}
-    \begin{itemize}
-      \item<2-> Ich will etwas von einem anderen Nutzer
-      \item<3-> => Ende-zu-Ende-Verschlüsselung
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Ende-zu-Ende-Verschlüsselung}
+  \frametitle{Ich will etwas von einem anderen Nutzer}
     \begin{center}
       \includegraphics[height=5cm]{img/fed-end-to-end.png}
     \end{center}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Web of Trust}
+    \frametitle{Ende-zu-Ende-Verschlüsselung I}
+    \begin{itemize}\Large
+      \item Email: GPG = Gnu Privacy Guard
+      \item Thunderbird: Enigmail
+      \item Outlook: Gpg4win
+      \item Apple Mail: GPGTools
+      \item Web: Mailvelope (Firefox, Chrome)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ende-zu-Ende-Verschlüsselung II}
+  \begin{itemize}
+    \item<2-> OTR für Jabber:
+      \begin{itemize}
+        \item Pidgin mit OTR-Plugin für Linux und Windows
+        \item GibberBot oder Xabber für Android
+        \item Adium für Mac, ChatSecure für iOS
+      \end{itemize}
+    \item<3-> palava.tv für Videotelefonie
+    \item<4-> Redphone für Handytelefonate (Android)
+    \item<5-> TextSecure für Nachrichten (Android)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Authentifizierung}
     \begin{center}
-      \includegraphics[height=5cm]{img/weboftrust.png}
-      \\{\small \href{http://upload.wikimedia.org/wikipedia/commons/a/ab/Web_of_trust.svg}{Grafik}: \href{http://creativecommons.org/licenses/by-sa/3.0/deed.en}{\cc{by-sa}} Koichi Akabe}
+      \includegraphics[height=5cm]{img/auth.png}
     \end{center}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Ende-zu-Ende-Verschlüsselung in der Praxis}
+  \frametitle{TextSecure}
+    \begin{center}
+      \includegraphics[height=6cm]{img/textsecure1.png}
+      \hspace{0.5cm}
+      \includegraphics[height=6cm]{img/textsecure2.png}
+    \end{center}
+\end{frame}
+ 
+\begin{frame}
+    \frametitle{Zusammenfassung}
     \begin{itemize}
-      \item<2-> GPG für Email (Plugin für Thunderbird: https://addons.mozilla.org/de/thunderbird/addon/enigmail/)
-      \item<3-> OTR für Jabber:
-        \begin{itemize}
-          \item Pidgin mit OTR-Plugin für Linux und Windows
-          \item GibberBot oder Xabber für Android
-          \item Adium für Mac, ChatSecure für iOS
-        \end{itemize}
-      \item<4-> palava.tv für Videotelefonie
-      \item<5-> Redphone für Handytelefonate (Android)
-      \item<6-> TextSecure für SMS (Android)
+      \item Tracking-Daten loswerden mit Disconnect
+      \item Datensparsamkeit / falsche Daten
+      \item Ende-zu-Ende-Verschlüsselung
     \end{itemize}
 \end{frame}
-
-\section{Ende}
-\subsection{}
 
 \begin{frame}
   \frametitle{Diskussion}
