@@ -1,6 +1,4 @@
-Chaos macht Schule SOOC1314
+Chaos macht Schule Ringvorlesung
 =======================
 
-https://webconf.vc.dfn.de/p1wrmxqp20x/
-
-http://www.sooc1314.de/
+PDF: https://github.com/c3d2/cms/raw/master/2014_04_23_ringvorlesung/slides.pdf
