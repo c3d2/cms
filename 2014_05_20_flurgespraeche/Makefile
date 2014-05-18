@@ -25,7 +25,7 @@ $(PICDIR)/%.pdf: $(PICDIR)/%.svg
 
 out/%.pdf:  src/%.tex deppdf  Makefile
 	mkdir -p out
-	pdflatex  -draftmode -interaction nonstopmode -output-directory out $<
+	pdflatex -draftmode -interaction nonstopmode -output-directory out $<
 	pdflatex -output-directory out $<
 
 
