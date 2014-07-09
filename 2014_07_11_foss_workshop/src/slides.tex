@@ -1,0 +1,70 @@
+\documentclass[12pt]{beamer}
+%\documentclass[20pt,handout]{beamer}
+\usetheme{Darmstadt}
+\usepackage{graphicx}
+%\usepackage[german]{babel}
+\usepackage{ngerman}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\setbeamertemplate{footline}[frame number]
+
+\newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}\hspace{1mm}}
+\usepackage{ifthen}
+\newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
+\usepackage{textcomp}
+\usepackage{hyperref}
+
+\pgfdeclareimage[height=.6cm]{c3d2logo}{./img/c3d2.pdf} 
+
+
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{main,foreground}
+\logo{\pgfputat{\pgfxy(-1,0)}{\pgfbox[center,base]{\pgfuseimage{c3d2logo}}}}
+
+
+\title{Freie Software}
+\author{\small Martin Byrenheid, Marius Melzer\\\large Chaos Computer Club Dresden}
+\date{11.07.2014}
+
+\begin{document}
+\maketitle
+
+\section{CCC}
+\subsection{}
+
+\begin{frame}
+  \frametitle{Chaos Computer Club}
+  \begin{figure}
+    \includegraphics[height=0.7\textheight]{img/fingerabdruck.jpg}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Chaos Computer Club}
+  \begin{figure}
+    \includegraphics[height=0.7\textheight]{img/trojaner.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Chaos Computer Club}
+    \begin{itemize}
+      \item<1-> Chaos Computer Club Dresden (\url{http://c3d2.de})
+          \note{}
+      \item<2-> Datenspuren: 13./14.09.2014 \url{http://datenspuren.de}
+      \item<3-> Podcasts (\url{http://pentamedia.de})
+      \item<4-> Chaos macht Schule
+    \end{itemize}
+\end{frame}
+
+\section{Probleme}
+\subsection{}
+
+\section{Freie Software}
+\subsection{}
+
+\section{Praxis-Beispiele}
+\subsection{}
+
+\end{document}
