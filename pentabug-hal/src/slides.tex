@@ -2,6 +2,8 @@
 %\documentclass[20pt,handout]{beamer}
 \usetheme{Darmstadt}
 \usepackage{graphicx}
+\usepackage{listings}
+\lstset{language=C}
 %\usepackage[german]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -30,20 +32,73 @@
 
 \section{Einführung in HAL}
 
+\begin{frame}[fragile]
+	\frametitle{Motivation - firmware/apps/example\_1.c}
+	\lstinputlisting[language=C,frame=single,basicstyle=\tiny]{/home/koeart/code/pentabug/firmware/apps/example_1.c}
+\end{frame}
+
+
 \begin{frame}
     \frametitle{Motivation}
     \begin{columns}[T]
-	    \column{.5\linewidth}
+    \column{.5\linewidth}
+    Software
     \begin{itemize}
-	    \item tast
-
+	    \item Code wiederverwendbar
+	    \item einfach benutzbare Funktionen
+	    \item wenig Hardwarekenntnisse
     \end{itemize}
     \column{.5\linewidth}
+    Hardware
     \begin{itemize}
-	    \item test
+    \item Anschlüsse können sich ändern
+    \item unterschiedliche Hardware, gleiche Funktion
+    \item Softwareentwicklung soll einfach sein
     \end{itemize}
     \end{columns}
 
 \end{frame}
+\begin{frame}
+    \frametitle{Abstraktionsebenen}
+    \begin{itemize}
+	    \item {Pin Definitionen \textit{<avr/io.h>}}
+	    \item {Hardwareabstraktionslayer \textit{firmware/lib/hal.c}}
+	    \item {Module \textit{firmware/lib/}}
+	    \item {Hauptprogramm (Endlosschleife) \textit{main.c}}
+	    \item {Software \textit{firmware/apps/}}
+    \end{itemize}
+    Einbinden mit
+    \begin{itemize}
+	    \item AVR Bibliotheken \textit{\#include <avr/io.h>}
+	    \item in ``include'' Ordner vorhandene Libs \textit{\#include <pentabug/hal.h>}
+	    \item sonstige Libs \textit{\#include ''./module/meinmodul''}
+    \end{itemize}
+\end{frame}
 
+\begin{frame}
+    \frametitle{HAL - Hardware Abstraction Layer}
+    \begin{itemize}
+	    \item ``Grenze'' zwischen Hardwareansteuerung und Software
+	    \item stellt für die benötigte Hardware einfache Funktionen zur Ansteuerung zur Verfügung
+    \end{itemize}
+    \begin{definition}
+	    Details an Hardware können geändert werden, ohne dass Apps geändert werden müssen.
+    \end{definition}
+     \begin{definition}
+	    Programmierer kann für unterschiedliche Hardware gleiche Programme nutzen.
+    \end{definition}
+\end{frame}
+
+\begin{frame}
+    \frametitle{HAL - Pentabug}
+    \begin{itemize}
+	    \item {Funktionen: \textit{firmware/lib/hal.c}}
+	    \item {Benutzung: einbinden von \textit{<pentabug/hal.h>}}
+	    \item {Dokumentation: \textit{firmware/doc/Befehle.odt}}
+    \end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+	\frametitle{example\_3.c}
+	\lstinputlisting[language=C,frame=single,basicstyle=\tiny]{/home/koeart/code/pentabug/firmware/apps/example_3.c}
+\end{frame}
 \end{document}
