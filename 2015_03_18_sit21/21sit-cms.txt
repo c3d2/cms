@@ -1,0 +1,122 @@
+Vorbereitungspad 21. Schulinformatiktag
+<http://www.sn.schule.de/schulinformatik/>
+Chaos macht Schule
+Workshop zum Thema: Smartphones und Datenschutz
+Git-Repo: <https://github.com/c3d2/cms>
+
+
+Themenbeschreibung Homepage:
+Smartphones und Datenschutz
+ Marius Melzer, Chaos-Computer-Club Dresden
+ 
+Smartphone, der Computer für die Hosentasche. Mit der stetig steigenden mobilen Nutzung von Handynetzen, WLAN, oder GPS-Diensten in Kombination mit werbegesponserten, proprietären Apps leidet vor allem eins: die Privatsphäre des Nutzers. Unser Vortrag beschäftigt sich mit der Frage, ob eine Smartphone-Nutzung auch ohne diese Einschränkungen möglich ist. Es wird diskutiert, inwiefern gezieltes Nutzungsverhalten, Jail-Breaks, Firewall-, Permission- und Crypto-Apps, Tor oder alternative Betriebssysteme diePrivatsphäre und Datensicherheit des Nutzers verbessern können.
+
+Anmeldestand: 17/15 Teilnehmern und 15/15 Teilnehmern. Zweimal ausgebucht!
+
+Workshop 1: 12:30 Uhr - 14:00 Uhr
+Workshop 2: 14:15 Uhr - 15:45 Uhr
+
+
+....
+
+Mögliche Beispiele
+- ApplePay / Google Wallet / Bitcoin :)
+- Gesundheitsdaten von Fitness-Apps / -Armbändern, Smartwatches usw.
+- Kundenkarten (häufig auch im Smartphone integriert, z.B. Subway)
+- PayPal und andere Zahlungsdienste; Alternativen?
+- Was man am Rechner kann und auf dem Smart-Device keine/kaum Kontrolle hat: Cookies, DevIDs usw.
+
+
+Einleitung?
+Wieviele von ihnen nutzen aktiv ein Smartphone?
+Wieviele ihrer Schueler nutzen aktiv eine Smartphone?
+
+Wer traut sich zu sein Smartphone selber sicher zu machen? (zu beherrschen?)
+Wer traut seinen Schülern/innen zu ...?
+
+
+
+
+Teil 1: -> Privatsphäre beim Smartphone möglich?
+Ebenen der Überwachung beim Smartphone
+Hardware (WLAN, GPS, Sensoren, Kamera, Mikrofon, Telefonie)
+* Bilder alt (Nokia_P30.JPG) + neu [Biildname?]
+* Hardware gibt tlw Privatspähreneinschränkungen vor
+* Viele Sensoren sind auch nicht offensichtlich: Bewegungssensor, Annäherungssensor, Fingerabdrucksensor, ...
+
+Betriebssystem (App Store, zur Nutzung notwendige Konten, Vorkonfiguration ...)
+* Erweiterungsmöglichkeiten (microSD Karten Slot, ...)
+* iOS
+** nur Anwendungen aus dem AppStore installierbar
+** Anwendungen werden von Apple geprueft bzw. zensiert
+*** "schuetzt" vor Betruergern
+*** "schuetzt" vor ungewollten Anwendungen (aus Apples Sicht)
+*** "schuetzt" vor zu viel Datenschutz
+** bringt eigene Cloud-Anbindung mit
+* Android
+** Anwendungen von ueberall installierbar
+** meist noch Anpassungen und Apps vom Hersteller
+** bringt eigene Cloud-Anbindung mit
+* Windows Phone (?)
+** Adressbuch nicht ohne Synchronisierung mit Microsoft oder Google
+
+Apps (Zugriff auf Hardware, Nutzerdaten)
+* rueckfuehrung auf Hardware oben
+* Zugriff auf Adressbuch, Kalender etc
+* (staendige) Internetverbindung
+* immer eindeutige Zuordnung auf ein Geraet/einen Nutzer
+* 
+
+Soziale Netzwerke
+* Bilder etc. lassen sich leicht teilen
+* Instant Messaging ersetzt SMS (und mehr?)
+* Zentralisierung -> genauere Profile erstellen
+
+Web (übliche Überwachung durch Trackingcookies etc.)
+* Tracking
+
+
+Teil 1.5: -> 
+App Permission Restrictions
+* Ermoeglichen genaue Kontrolle was eine App darf
+* leider meistens vom Hersteller vorgegeben (bzw. nicht eingeschränkt)
+* nicht auf einen Nutzungszweck beschraenkbar
+* zeigen wie zu finden (ios und android)
+* Mitmach-Teil
+** Ratespiel -> Hut mit Zetteln mit Permissions, es sollen Bedrohungsszenarien konstruiert werden; auf Rückseite Nummer von App
+	Lehrer hat Auflösung
+** Schüler sollen aufschreiben, welche Permissions ihre meistgenutzten apps brauchen. Warum. Welche Permissions sind nötig?
+** Welche Permissions gewaehren sich die Apps wirklich bzw. wie nutzen Apps ihre Permissions wirklich?
+
+Alternative AppStores
+* nur FLOSS Software
+* App Entwickler sind mehr an Datenschutz interessiert, 
+* nur Datenschutzfreundliche Software
+Alternative Firmware fuer Android
+* basiert auf Quellofenem Teil von Google
+* Hersteller und Google fuegen properitaere Software hinzu
+* keine datenschutzverletzenden Elemente mehr enthalten
+* gerootet
+
+Tor Bundle (Guardian)
+
+Crypto auf Mobilgeräten -> wie doll vertraut man der Plattform und seinen Fähigkeiten?
+
+Hardwarehacks:
+- Smartphone ausschalten
+- Kamera verdecken machen, ...
+
+Alternative Betriebssysteme?
+* Alternative Android ROMs Cyanogenmod u. a.
+* Firefox OS
+* Sailfish OS/Jolla
+* Ubuntu
+
+
+Teil 2: Auswertung Nutzerdaten
+Problematik des Data Mining (ja, wenn ja: wie detailliert?)
+- Supermarktkette TARGET kann Schwangerschaft vorhersagen
+- Marijuhana Cookie
+- Facebook "Trust Engineers" (http://www.radiolab.org/story/trust-engineers/)
+- ...
+
