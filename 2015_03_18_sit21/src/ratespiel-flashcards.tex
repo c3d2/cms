@@ -1,0 +1,31 @@
+\documentclass[a4paper,landscape]{article}
+\paperwidth=0.25\paperwidth
+\paperheight=0.25\paperheight
+\pdfpagewidth=\paperwidth
+\pdfpageheight=\paperheight
+\usepackage{tikz}
+\begin{document}
+%\newcount\malc 
+%\malc=0
+%\loop
+%\advance\malc by 1
+%\foreach \mcolor/\mside in {green/front,blue/back} {%
+%\newpage
+%\pagecolor{\mcolor}%
+\begin{tikzpicture}[remember picture, overlay]
+	\node[yshift=0.8mm] at (current page) {Überschrift};
+	\node[yshift=-4mm] at (current page) {Text};
+%\node[font=\bfseries,scale=10,yshift=0.8mm] at (current page) {\the\malc}; % front side
+%\node[font=\bfseries,scale=4,yshift=-4mm] at (current page) {\mside{} side}; % back side
+\end{tikzpicture}%
+%}% End of \foreach...
+\newpage
+%\pagecolor{\mcolor}%
+\begin{tikzpicture}[remember picture, overlay]
+	\node at (current page) {Vorne};
+	\node at (current page) {Hinten};
+%\node[font=\bfseries,scale=10,yshift=0.8mm] at (current page) {\the\malc}; % front side
+%\node[font=\bfseries,scale=4,yshift=-4mm] at (current page) {\mside{} side}; % back side
+\end{tikzpicture}%
+%\ifnum\malc<2\repeat % E.g. a number of business cards...
+\end{document}

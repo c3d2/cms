@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage{pdfpages}
+\begin{document}
+\def\malfile{ratespiel-flashcards.pdf}
+\pdfximage{\malfile}
+\newcount\malc \malc=0
+\loop
+\advance\malc by 1%
+\ifnum\malc<\pdflastximagepages
+  \ifodd\malc\else
+  \includepdf[fitpaper,pages={\the\malc},angle=90]{\malfile}
+  \fi
+\repeat
+\end{document}
