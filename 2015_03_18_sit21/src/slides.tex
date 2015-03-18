@@ -24,12 +24,22 @@
 
 
 \title{Smartphones und Datenschutz}
-\author{\small Stephan Thamm und Paul Schwanse\\\large Chaos Computer Club Dresden}
+\author{\small Paul Schwanse und Stephan Thamm\\\large Chaos Computer Club Dresden}
 \date{18.03.2015}
 
+\AtBeginSection[]
+{
+  \begin{frame}
+  \frametitle{Inhalt}
+  \tableofcontents[currentsection]
+  \end{frame}
+}
 \begin{document}
 \maketitle
-
+\tableofcontents[%
+	currentsection,
+	sectionstyle=show,
+]
 
 \section{Einleitung}
 \subsection{}
@@ -40,9 +50,9 @@
 	\includegraphics[height=0.2\textheight]{img/chaosknoten.png}
     \end{center}	
     \begin{itemize}
-      \item<1-> Verein wurde 1981 gegr"undet (\url{https://ccc.de})          
+      \item<1-> Verein wurde 1981 gegründet (\url{https://ccc.de})          
       \item<2-> Aktuell ca. 4500 Mitglieder
-      \item<3-> Betreibt u.a. "Offentlichkeitsarbeit und Politikberatung      
+      \item<3-> Betreibt u.a. Öffentlichkeitsarbeit und Politikberatung      
     \end{itemize}
 \end{frame}
 
@@ -73,6 +83,7 @@
     \end{itemize}
 \end{frame}
 
+\section{Fragerunde}
 \begin{frame}
     \frametitle{Fragerunde}
     \begin{itemize}
@@ -187,4 +198,47 @@
 		\item<5-> Ubuntu
 	\end{itemize}
 \end{frame}
+
+\section{Was geschieht mit den Daten}
+\subsection{}
+\begin{frame}
+	\frametitle{Datenauswertung}
+	\begin{itemize}
+		\item Firmen nutzen Nutzerdaten
+	\end{itemize}
+	Beispiel
+	\begin{itemize}
+		\item TARGET sagt dir ob du schwanger bist
+		\item CampaignGrid weiß, wen sie für Marijuhana legalisierung umwerben müssen
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Nutzerdaten}
+	\begin{itemize}
+		\item Kern-Daten
+		\item angereicherte Daten
+	\end{itemize}
+	Wie funktioniert es?
+	\begin{itemize}
+		\item Daten werden gekauft
+		\item Daten werden über Aktionen gesammelt
+		\item Daten sind öffentlich einsehbar
+		\item zusätzliche Daten werden erzeugt
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Beispiel: Acxiom}
+	\begin{itemize}
+		\item 1,5 Milliarden US-Dollar Umsatz
+		\item > 12 Prozent Anteil am Direktmarketing
+		\item 2003: 1,6 Milliarden Datensätze gestohlen
+	\end{itemize}
+	\begin{quote} 
+		Aboutthedata.com, at least in its initial incarnation, leaves out many data elements that Acxiom markets to its corporate clients -- intimate details like whether a person is a "`potential inheritor"' or an "`adult with senior parent,"' or whether a household has a "`diabetic focus"' or "`senior needs."' Without a more complete picture of industry practices, privacy advocates say, consumers cannot make informed decisions about whether to share personal information with companies. (NY Times)
+	\end{quote}
+\end{frame}
+
 \end{document}
+
