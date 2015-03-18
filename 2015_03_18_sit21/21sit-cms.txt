@@ -120,3 +120,477 @@ Problematik des Data Mining (ja, wenn ja: wie detailliert?)
 - Facebook "Trust Engineers" (http://www.radiolab.org/story/trust-engineers/)
 - ...
 
+
+Ratespiel Apps
+TOPP APPS
+Whatsapp
+
+In-App-Käufe
+
+Geräte- und App-Verlauf
+Aktive Apps abrufen
+
+Identität
+Kontaktkarten lesen,
+Konten hinzufügen oder entfernen,
+Konten auf dem Gerät suchen
+
+Kontakte
+
+   Kontakte lesen
+   Kontakte ändern
+
+Standort
+
+    Ungefährer Standort (netzwerkbasiert)
+    Genauer Standort (GPS- und netzwerkbasiert)
+
+SMS
+
+    SMS empfangen
+    SMS senden
+
+Fotos/Medien/Dateien
+
+    USB-Speicherinhalte lesen
+    USB-Speicherinhalte ändern oder löschen
+
+Kamera
+
+    Bilder und Videos aufnehmen
+
+Mikrofon
+
+    Audio aufnehmen
+
+WLAN-Verbindungsinformationen
+
+    WLAN-Verbindungen abrufen
+
+Geräte-ID & Anrufinformationen
+
+    Telefonstatus und Identität abrufen
+
+Sonstige
+
+    Synchronisierungsstatistiken lesen
+    Daten aus dem Internet abrufen
+    Netzwerkverbindungen abrufen
+    Synchronisierung aktivieren oder deaktivieren
+    WLAN-Verbindungen herstellen und trennen
+    Zugriff auf alle Netzwerke
+    Audio-Einstellungen ändern
+    Verknüpfungen deinstallieren
+    Systemeinstellungen ändern
+    Google-Servicekonfiguration lesen
+    Vibrationsalarm steuern
+    Verknüpfungen installieren
+    Pairing mit Bluetooth-Geräten durchführen
+    Konten erstellen und Passwörter festlegen
+    Dauerhaften Broadcast senden
+    Beim Start ausführen
+    Synchronisierungseinstellungen lesen
+    Ruhezustand deaktivieren
+    Konten auf dem Gerät verwenden
+
+
+94%
+In-App-Käufe
+
+Identität
+
+    Konten auf dem Gerät suchen
+
+Fotos/Medien/Dateien
+
+    USB-Speicherinhalte ändern oder löschen
+    USB-Speicherinhalte lesen
+
+Sonstige
+
+    Daten aus dem Internet abrufen
+    Zugriff auf alle Netzwerke
+    Netzwerkverbindungen abrufen
+    Ruhezustand deaktivieren
+    Vibrationsalarm steuern
+    Beim Start ausführen
+
+Crossy Roads
+In-App-Käufe
+
+Fotos/Medien/Dateien
+
+    USB-Speicherinhalte ändern oder löschen
+    USB-Speicherinhalte lesen
+
+WLAN-Verbindungsinformationen
+
+    WLAN-Verbindungen abrufen
+
+Geräte-ID & Anrufinformationen
+
+    Telefonstatus und Identität abrufen
+
+Sonstige
+
+    Zugriff auf alle Netzwerke
+    Netzwerkverbindungen abrufen
+
+Messenger (Facebook)
+Identität
+
+    Kontaktkarten lesen
+    Konten auf dem Gerät suchen
+
+Kontakte
+
+    Kontakte lesen
+
+Standort
+
+    Ungefährer Standort (netzwerkbasiert)
+    Genauer Standort (GPS- und netzwerkbasiert)
+
+SMS
+
+    SMS oder MMS bearbeiten
+    SMS empfangen
+    MMS empfangen
+    SMS senden
+    SMS oder MMS lesen
+
+Telefon
+
+    Anrufliste lesen
+    Telefonnummern direkt anrufen
+
+Fotos/Medien/Dateien
+
+    USB-Speicherinhalte lesen
+    USB-Speicherinhalte ändern oder löschen
+
+Kamera
+
+    Bilder und Videos aufnehmen
+
+Mikrofon
+
+    Audio aufnehmen
+
+WLAN-Verbindungsinformationen
+
+    WLAN-Verbindungen abrufen
+
+Geräte-ID & Anrufinformationen
+
+    Telefonstatus und Identität abrufen
+
+Sonstige
+
+    \item Daten aus dem Internet abrufen
+    \item Dateien ohne Benachrichtigung herunterladen
+    \item Netzwerkverbindungen abrufen
+    \item Akkudaten lesen
+    \item Zugriff auf alle Netzwerke
+    \item Audio-Einstellungen ändern
+    \item Google-Servicekonfiguration lesen
+    \item Netzwerkkonnektivität ändern
+    \item Vibrationsalarm steuern
+    \item Verknüpfungen installieren
+    \item Dauerhaften Broadcast senden
+    \item Beim Start ausführen
+    \item Synchronisierungseinstellungen lesen
+    \item Ruhezustand deaktivieren
+    \item Über anderen Apps einblenden
+
+Facebook
+Geräte-ID & Anrufinformationen
+
+    Telefonstatus und Identität abrufen
+
+Sonstige
+
+    Daten aus dem Internet abrufen
+    Größe des Hintergrundbildes anpassen
+    Dateien ohne Benachrichtigung herunterladen
+    Akkudaten lesen
+    WLAN-Verbindungen herstellen und trennen
+    Zugriff auf alle Netzwerke
+    Audio-Einstellungen ändern
+    Netzwerkkonnektivität ändern
+    Vibrationsalarm steuern
+    Statusleiste ein-/ausblenden
+    Konten erstellen und Passwörter festlegen
+    Dauerhaften Broadcast senden
+    Beim Start ausführen
+    Synchronisierungseinstellungen lesen
+    Hintergrund festlegen
+    Netzwerkverbindungen abrufen
+    Aktive Apps neu ordnen
+    Synchronisierung aktivieren oder deaktivieren
+    Google-Servicekonfiguration lesen
+    Verknüpfungen installieren
+    Ruhezustand deaktivieren
+    Über anderen Apps einblenden
+
+BESTSELLER
+QuizDuell
+In-App-Käufe
+
+Identität
+
+    Konten auf dem Gerät suchen
+
+Fotos/Medien/Dateien
+
+    USB-Speicherinhalte lesen
+    USB-Speicherinhalte ändern oder löschen
+
+Geräte-ID & Anrufinformationen
+
+    Telefonstatus und Identität abrufen
+
+Sonstige
+
+    Daten aus dem Internet abrufen
+    Netzwerkverbindungen abrufen
+    Zugriff auf alle Netzwerke
+    Ruhezustand deaktivieren
+    Vibrationsalarm steuern
+    Google Play-Lizenzprüfung
+
+Threema
+Identität
+
+    Kontaktkarten lesen
+    Konten auf dem Gerät suchen
+    Konten hinzufügen oder entfernen
+
+Kontakte
+
+    Kontakte lesen
+    Kontakte ändern
+
+Standort
+
+    Genauer Standort (GPS- und netzwerkbasiert)
+
+SMS
+
+    SMS empfangen
+
+Fotos/Medien/Dateien
+
+    USB-Speicherinhalte ändern oder löschen
+    USB-Speicherinhalte lesen
+
+Geräte-ID & Anrufinformationen
+
+    Telefonstatus und Identität abrufen
+
+Sonstige
+
+    Daten aus dem Internet abrufen
+    Zugriff auf alle Netzwerke
+    Netzwerkverbindungen abrufen
+    Konten erstellen und Passwörter festlegen
+    Synchronisierungseinstellungen lesen
+    Synchronisierung aktivieren oder deaktivieren
+    Ruhezustand deaktivieren
+    Beim Start ausführen
+    Vibrationsalarm steuern
+    Verknüpfungen installieren
+    Google-Servicekonfiguration lesen
+    Google Play-Lizenzprüfung
+
+Minecraft Pocket Edition
+Fotos/Medien/Dateien
+
+    USB-Speicherinhalte ändern oder löschen
+    USB-Speicherinhalte lesen
+
+Sonstige
+
+    Netzwerkverbindungen abrufen
+    Zugriff auf alle Netzwerke
+    Vibrationsalarm steuern
+
+Worms3
+In-App-Käufe
+
+Identität
+
+    Konten auf dem Gerät suchen
+    Kontaktkarten lesen
+
+Kontakte
+
+    Kontakte lesen
+
+Fotos/Medien/Dateien
+
+    USB-Speicherinhalte ändern oder löschen
+    USB-Speicherinhalte lesen
+
+WLAN-Verbindungsinformationen
+
+    WLAN-Verbindungen abrufen
+
+Geräte-ID & Anrufinformationen
+
+    Telefonstatus und Identität abrufen
+
+Sonstige
+
+    Daten aus dem Internet abrufen
+    Zugriff auf alle Netzwerke
+    Netzwerkverbindungen abrufen
+    Ruhezustand deaktivieren
+    Vibrationsalarm steuern
+    Google Play-Lizenzprüfung
+
+Geometry Dash
+Fotos/Medien/Dateien
+
+    USB-Speicherinhalte ändern oder löschen
+    USB-Speicherinhalte lesen
+
+WLAN-Verbindungsinformationen
+
+    WLAN-Verbindungen abrufen
+
+Geräte-ID & Anrufinformationen
+
+    Telefonstatus und Identität abrufen
+
+Sonstige
+
+    Zugriff auf alle Netzwerke
+    Netzwerkverbindungen abrufen
+
+ERFOLGREICH IN APPS
+Clash of Clans
+In-App-Käufe
+
+Identität
+
+    Konten auf dem Gerät suchen
+
+Fotos/Medien/Dateien
+
+    USB-Speicherinhalte ändern oder löschen
+    USB-Speicherinhalte lesen
+
+WLAN-Verbindungsinformationen
+
+    WLAN-Verbindungen abrufen
+
+Sonstige
+
+    Daten aus dem Internet abrufen
+    Zugriff auf alle Netzwerke
+    Netzwerkverbindungen abrufen
+    Ruhezustand deaktivieren
+    WLAN-Verbindungen herstellen und trennen
+
+Hay Day
+In-App-Käufe
+
+Identität
+
+    Konten auf dem Gerät suchen
+
+Fotos/Medien/Dateien
+
+    USB-Speicherinhalte ändern oder löschen
+    USB-Speicherinhalte lesen
+
+WLAN-Verbindungsinformationen
+
+    WLAN-Verbindungen abrufen
+
+Sonstige
+
+    Daten aus dem Internet abrufen
+    Netzwerkverbindungen abrufen
+    WLAN-Verbindungen herstellen und trennen
+    Zugriff auf alle Netzwerke
+    Google Play-Lizenzprüfung
+    Ruhezustand deaktivieren
+
+Candy Crush Soda Saga
+Kontakte
+
+    Kontakte lesen
+
+WLAN-Verbindungsinformationen
+
+    WLAN-Verbindungen abrufen
+
+Sonstige
+
+    Daten aus dem Internet abrufen
+    Zugriff auf alle Netzwerke
+    Netzwerkverbindungen abrufen
+    Ruhezustand deaktivieren
+
+Empire: Four Kingdoms
+WLAN-Verbindungsinformationen
+
+    WLAN-Verbindungen abrufen
+
+Geräte-ID & Anrufinformationen
+
+    Telefonstatus und Identität abrufen
+
+Sonstige
+
+    Daten aus dem Internet abrufen
+    Netzwerkverbindungen abrufen
+    Zugriff auf alle Netzwerke
+    Vibrationsalarm steuern
+
+Candy Crush Saga
+In-App-Käufe
+
+Identität
+
+    Konten auf dem Gerät suchen
+
+WLAN-Verbindungsinformationen
+
+    WLAN-Verbindungen abrufen
+
+Sonstige
+
+    Daten aus dem Internet abrufen
+    Zugriff auf alle Netzwerke
+    Netzwerkverbindungen abrufen
+    Ruhezustand deaktivieren
+
+Plants vs. Zombies
+In-App-Käufe
+
+Identität
+
+    Konten auf dem Gerät suchen
+
+Fotos/Medien/Dateien
+
+    USB-Speicherinhalte ändern oder löschen
+    USB-Speicherinhalte lesen
+
+WLAN-Verbindungsinformationen
+
+    WLAN-Verbindungen abrufen
+
+Sonstige
+
+    Daten aus dem Internet abrufen
+    Netzwerkverbindungen abrufen
+    Zugriff auf alle Netzwerke
+    Vibrationsalarm steuern
+    Ruhezustand deaktivieren
+    Google Play-Lizenzprüfung
+
+
