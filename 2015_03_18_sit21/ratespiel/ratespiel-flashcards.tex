@@ -1,56 +1,247 @@
 \documentclass[a4paper,landscape]{article}
-\paperwidth=0.25\paperwidth
-\paperheight=0.25\paperheight
+\usepackage{ngerman}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\paperwidth=0.5\paperwidth
+\paperheight=0.5\paperheight
 \pdfpagewidth=\paperwidth
 \pdfpageheight=\paperheight
 
-%\foreach \x/\y in {7/0, 8/10, ..., 10/30}
-%{
-%\draw (2, 2, \x) circle(2) node[right]{\y};
-%\draw[->, ultra thick, red] (2, 2, \x) --++ (\y:2) --++ (\y+180:4);
-%}
 \usepackage{tikz}
 
-\newcommand{\beispiel}[1][{}]{%
-		\foreach \kategorie in #1{%
-			\foreach \rkategorie in \kategorie{%
-				\foreach \recht in \kategorie{%
-					\recht
-				};
-			};
-		};
-}
+
+\usepackage{multicol}
 
 \begin{document}
 \newpage
 \begin{tikzpicture}[remember picture, overlay]
-	\node[yshift=0.8mm] at (current page) {Überschrift};
-	\node[yshift=-4mm] at (current page) {Text};
-\end{tikzpicture}%
+	\node[] at (current page) {\textbf{Whatsapp}};
+\end{tikzpicture}
 \newpage
 \begin{tikzpicture}[remember picture, overlay]
-	\node at (current page) {Vorne};
-	\node at (current page) {Hinten};
-\end{tikzpicture}%
-\beispiel{{Whatsapp,{In-App-Käufe,
-	Geräte- und App-Verlauf{Aktive Apps abrufen}, 
-	Identität{Kontaktkarten lesen,
-		Konten hinzufügen oder entfernen,
-	Konten auf dem Gerät suchen}}}
-}
+\node[align=left] at (current page) {%
+
+\begin{minipage}{1\textwidth}
+\tiny
+\begin{multicols}{2}
+	\textbf {In-App-Kaeufe}\\
+	\textbf {Aktive Apps abrufen}\\
+	\textbf {Identitaet}\\
+		\begin{itemize}
+			\item	Kontaktkarten lesen
+			\item	Konten hinzufuegen oder entfernen
+			\item	Konten auf dem Gerät suchen
+		\end{itemize}
+	\textbf{Kontakte}\\
+	    \begin{itemize}
+	    	\item	Kontakte lesen
+	    	\item	Kontakte aendern
+	    \end{itemize}
+	\textbf{Standort}\\
+	    \begin{itemize}
+	    	\item	Ungefaehrer Standort
+	    	\item	Genauer Standort
+	    \end{itemize}
+	\textbf{SMS}\\
+	\textbf{Fotos/Medien/Dateien}\\
+	    \begin{itemize}
+	    	\item	USB-Speicher lesen, aendern, loeschen
+	    \end{itemize}
+	\textbf{Kamera}\\
+	\textbf{Mikrofon}\\
+	\textbf{Wlan}\\
+	\textbf{Geraete-ID und Anrufinformationen}
+	\textbf{Sonstige}
+	\begin{itemize}
+		\item Synchronisierungsstatistiken lesen
+		\item Daten aus dem Internet abrufen
+		\item Netzwerkverbindungen abrufen
+		\item Synchronisierung aktivieren oder deaktivieren
+		\item WLAN-Verbindungen herstellen und trennen
+		\item Zugriff auf alle Netzwerke
+		\item Audio-Einstellungen aendern
+		\item Verknuepfungen deinstallieren
+		\item Systemeinstellungen aendern
+		\item Google-Servicekonfiguration lesen
+		\item Vibrationsalarm steuern
+		\item Verknuepfungen installieren
+		\item Pairing mit Bluetooth-Geraeten durchfuehren
+		\item Konten erstellen und Passwoerter festlegen
+		\item Dauerhaften Broadcast senden
+		\item Beim Start ausfuehren
+		\item Synchronisierungseinstellungen lesen
+		\item Ruhezustand deaktivieren
+		\item Konten auf dem Geraet verwenden 
+	\end{itemize}
+\end{multicols}
+\end{minipage}
+};
+\end{tikzpicture}
+
+\newpage
+\begin{tikzpicture}[remember picture, overlay]
+	\node[] at (current page) {\textbf{94\%}};
+\end{tikzpicture}
+\newpage
+\begin{tikzpicture}[remember picture, overlay]
+	\node[align=left] at (current page) {%
+
+	\begin{minipage}{1\textwidth}
+	\tiny
+	\begin{multicols}{2}
+		\textbf {Identität}\\
+			\begin{itemize}
+				\item	Konten auf dem Gerät suchen
+			\end{itemize}
+			\textbf{Fotos/Medien/Dateien}
+			\begin{itemize}
+				\item Speicherinhalte ändern
+				\item löschen
+				\item lesen
+			\end{itemize}
+			\textbf{Sonstige}
+			\begin{itemize}
+				\item	Daten aus dem Internet abrufen
+				\item	Zugriff auf alle Netzwerke
+				\item	Netzwerkverbindungen abrufen
+				\item	Ruhezustand deaktivieren
+				\item	Vibrationsalarm steuern
+				\item	Beim Start ausführen
+			\end{itemize}
+	\end{multicols}
+	\end{minipage}
+};
+\end{tikzpicture}
+\newpage
+\begin{tikzpicture}[remember picture, overlay]
+	\node[] at (current page) {\textbf{Crossy Roads}};
+\end{tikzpicture}
+\newpage
+\begin{tikzpicture}[remember picture, overlay]
+	\node[align=left] at (current page) {%
+
+	\begin{minipage}{1\textwidth}
+	\tiny
+	\begin{multicols}{2}
+		\textbf {In-App-Käufe}\\
+		\textbf{Fotos/Medien/Dateien}
+			\begin{itemize}
+				\item Speicher ändern
+				\item	löschen
+				\item	lesen
+			\end{itemize}
+			\textbf{WLAN-Verbindungsinformationen}\\
+			\textbf{Geräte- und Anrufinformationen}\\
+			\textbf{Sonstige}
+			\begin{itemize}
+				\item Zugriff auf alle Netzwerke
+				\item Netzwerkverbindungen abrufen
+			\end{itemize}
+	\end{multicols}
+	\end{minipage}
+};
+\end{tikzpicture}
+\newpage
+\begin{tikzpicture}[remember picture, overlay]
+	\node[] at (current page) {\textbf{Messenger (Facebook)}};
+\end{tikzpicture}
+\newpage
+\begin{tikzpicture}[remember picture, overlay]
+	\node[align=left] at (current page) {%
+
+	\begin{minipage}{1\textwidth}
+	\tiny
+	\begin{multicols}{2}
+		\textbf {Identität}\\
+			\begin{itemize}
+				\item	Kontaktkarten lesen
+				\item	Konten auf dem Gerät suchen
+			\end{itemize}
+			\textbf{Kontakte}\\
+			\textbf{Standort}
+			\begin{itemize}
+				\item ungefährer Standort
+				\item genauer Standort
+			\end{itemize}
+			\textbf{SMS}\\
+			\textbf{Telefon}
+			\begin{itemize}
+				\item Anrufliste lesen
+				\item Telefonnummern direkt anrufen
+			\end{itemize}
+			\textbf{Fotos/Medien/Dateien}
+			\begin{itemize}
+				\item Speicher lesen
+				\item ändern
+				\item löschen
+			\end{itemize}
+			\textbf{Kamera}\\
+			\textbf{Mikrofon}\\
+			\textbf{WLAN-Verbindungsinformationen}\\
+			\textbf{Geräte-ID und Anrufinformationen}\\
+			\textbf{Sonstige}
+			\begin{itemize}
+			    \item Daten aus dem Internet abrufen
+    \item Dateien ohne Benachrichtigung herunterladen
+    \item Netzwerkverbindungen abrufen
+    \item Akkudaten lesen
+    \item Zugriff auf alle Netzwerke
+    \item Audio-Einstellungen ändern
+    \item Google-Servicekonfiguration lesen
+    \item Netzwerkkonnektivität ändern
+    \item Vibrationsalarm steuern
+    \item Verknüpfungen installieren
+    \item Dauerhaften Broadcast senden
+    \item Beim Start ausführen
+    \item Synchronisierungseinstellungen lesen
+    \item Ruhezustand deaktivieren
+    \item Über anderen Apps einblenden
+\end{itemize}
+	\end{multicols}
+	\end{minipage}
+};
+\end{tikzpicture}
+
+\newpage
+\begin{tikzpicture}[remember picture, overlay]
+	\node[] at (current page) {\textbf{Appname}};
+\end{tikzpicture}
+\newpage
+\begin{tikzpicture}[remember picture, overlay]
+	\node[align=left] at (current page) {%
+
+	\begin{minipage}{1\textwidth}
+	\tiny
+	\begin{multicols}{2}
+		\textbf {Kategorie}\\
+			\begin{itemize}
+				\item	Recht 1
+				\item	Recht 2
+				\item	Recht 3
+			\end{itemize}
+	\end{multicols}
+	\end{minipage}
+};
+\end{tikzpicture}
 \end{document}
 
 %TOPP APPS
-%{Whatsapp,{In-App-Käufe,
-%	Geräte- und App-Verlauf{Aktive Apps abrufen}, 
-%	Identität{Kontaktkarten lesen,
-%		Konten hinzufügen oder entfernen,
-%	Konten auf dem Gerät suchen}}}
+%Whatsapp
+%
+%In-App-Käufe
+%
+%Geräte- und App-Verlauf
+%Aktive Apps abrufen
+%
+%Identität
+%Kontaktkarten lesen,
+%Konten hinzufügen oder entfernen,
+%Konten auf dem Gerät suchen
 %
 %Kontakte
 %
-%    Kontakte lesen
-%    Kontakte ändern
+%   Kontakte lesen
+%   Kontakte ändern
 %
 %Standort
 %

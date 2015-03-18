@@ -7,7 +7,7 @@
 \malc=0 % setting the counter
 \loop
 \advance\malc by 1%
-\includepdf[fitpaper,pages={\the\malc},scale=1]{ratespiel-processing1b.pdf} % 0.92 in production
-\includepdf[fitpaper,pages={\the\malc},reflect,scale=1]{ratespiel-processing2b.pdf} % 0.92 in production
+\includepdf[fitpaper,pages={\the\malc},scale=0.92]{ratespiel-processing1b.pdf} % 0.92 in production
+\includepdf[fitpaper,pages={\the\malc},reflect,scale=0.92]{ratespiel-processing2b.pdf} % 0.92 in production
 \ifnum\malc<\pdflastximagepages\repeat
 \end{document}
