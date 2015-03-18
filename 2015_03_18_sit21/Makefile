@@ -12,7 +12,7 @@ svgpdf = $(patsubst %.svg,%.pdf,$(depsvg))
 
 all: deppdf $(PDF_FILES)
 ratespiel: $(RATE_FILES)
-	for FILE in $(RATE_FILES); do pdflatex $$FILE; done
+	for FILE in $(RATE_FILES); do pdflatex -output-directory out $$FILE; done
 clean:
 	rm $(svgpdf)
 	rm -rf out
