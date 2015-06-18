@@ -3,7 +3,7 @@
 \usetheme{Darmstadt}
 \usepackage{graphicx}
 %\usepackage[german]{babel}
-\usepackage{ngerman}
+%\usepackage{ngerman}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{tikz}
@@ -36,9 +36,8 @@
 \begin{frame}
   \frametitle{Chaos Computer Club}
   \begin{figure}
-    \includegraphics<1>[height=0.7\textheight]{img/fingerabdruck.jpg}
-    \includegraphics<2>[height=0.7\textheight]{img/trojaner.png}
-    \includegraphics<3>[height=0.7\textheight]{img/pentabug.jpg}
+    \includegraphics<1>[height=0.7\textheight]{img/trojaner.png}
+    \includegraphics<2>[height=0.7\textheight]{img/pentabug.jpg}
   \end{figure}
 \end{frame}
 
@@ -55,25 +54,114 @@
     \end{itemize}
 \end{frame}
 
-% stasi vs nsa
+\begin{frame}
+    \frametitle{Stasi vs. NSA}
+    \only<1>{
+      \begin{center}
+        "Wir wissen z.B., dass es nicht so ist, wie bei der Stasi und dem KGB, dass es dicke Aktenbände gibt, wo unsere Gesprächsinhalte alle aufgeschrieben und schön abgeheftet sind. Das ist es nicht."
+        \end{center}
+        \hfill \tiny Bundespräsident Gauck zur NSA-Überwachung
+    }
+    \includegraphics<2>[height=0.7\textheight]{img/akten1.png}
+    \includegraphics<3>[height=0.7\textheight]{img/akten2.png}
+\end{frame}
 
 
 \section{Daten sammeln}
 \subsection{}
 
-% (tempora)
-% prism
-% Facebook
-% cookies
+\begin{frame}
+    \frametitle{Tempora}
+    \begin{center}
+      \includegraphics[height=0.7\textheight]{img/spiegel-tempora.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Internet}
+    \pause
+    \begin{center}
+      \includegraphics[height=0.7\textheight]{img/Internet_map_1024.jpg}
+      {\\ \tiny \href{http://commons.wikimedia.org/wiki/File:Internet_map_1024.jpg}{Grafik}: \href{http://creativecommons.org/licenses/by/2.5/deed.en}{\cc{by}} The Opte Project}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Prism}
+    \begin{center}
+      \includegraphics[height=0.7\textheight]{img/prism.jpg}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Geschäftsmodelle}
+    \pause
+    \begin{figure}
+      \includegraphics[height=0.6\textheight]{img/business_pigs.jpg}
+      \license[http://geekandpoke.typepad.com/geekandpoke/2010/12/the-free-model.html]{\cc{by-sa}}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Wert von Daten}
+    \pause
+    \begin{center}
+      \includegraphics[width=0.7\textwidth]{img/daten.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lightbeam}
+    \begin{center} 
+        \includegraphics<1>[width=0.5\textwidth]{img/lightbeam.png}
+        \includegraphics<2>[width=0.7\textwidth]{img/lightbeam_1.png}
+        \includegraphics<3>[width=0.7\textwidth]{img/lightbeam_2.png}
+    \end{center}
+\end{frame}
 
 
 \section{Daten auswerten}
 \subsection{}
 
-% malte spitz
-% google takeout
-% punch cards
-% schwangerschaft
+\begin{frame}
+    \frametitle{Vorratsdaten}
+    \pause
+    \includegraphics[height=0.7\textheight]{img/maltespitz.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Google Takeout}
+    \pause
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]<2>{img/google_heat_1.png}
+      \includegraphics[width=0.8\textwidth]<3>{img/google_heat_2.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Zeitstempel}
+    \pause
+    \begin{center}
+      \only<2>{
+        \includegraphics[width=0.9\textwidth]{img/punch_1.png}
+        \\ \hfill \small Alan, Microblogging
+      }
+
+      \only<3>{
+        \includegraphics[width=0.9\textwidth]{img/punch_2.png}
+        \\ \hfill \small Bob, Microblogging
+      }
+
+      \only<4>{
+        \includegraphics[width=0.9\textwidth]{img/punch_3.png}
+        \\ \hfill \small Charlie, Github
+      }
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Data Mining}
+\end{frame}
 
 \end{document}
 
