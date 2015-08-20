@@ -1,0 +1,3 @@
+[submodule "sit-2013"]
+	path = sit-2013
+	url = git@github.com:c3d2/sit-2013.git
