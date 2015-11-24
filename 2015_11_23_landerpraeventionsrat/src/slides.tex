@@ -1,0 +1,365 @@
+\documentclass[12pt]{beamer}
+%\documentclass[20pt,handout]{beamer}
+\usetheme{Darmstadt}
+\usepackage{graphicx}
+%\usepackage[german]{babel}
+\usepackage{ngerman}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\setbeamertemplate{footline}[frame number]
+
+\newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}\hspace{1mm}}
+\usepackage{ifthen}
+\newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
+\usepackage{textcomp}
+\usepackage{hyperref}
+
+\pgfdeclareimage[height=.6cm]{c3d2logo}{./img/c3d2.pdf}
+
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{main,foreground}
+\logo{\pgfputat{\pgfxy(-1,0)}{\pgfbox[center,base]{\pgfuseimage{c3d2logo}}}}
+
+
+\title{Wie schütze ich mich vor Überwachung?}
+\author{\small Marius Melzer\\\large Chaos Computer Club Dresden}
+\date{24.11.2015}
+
+\begin{document}
+\maketitle
+
+\section{Einleitung}
+\subsection{}
+
+\begin{frame}
+    \frametitle{Chaos Computer Club}
+    \begin{center}
+	\includegraphics[height=0.2\textheight]{img/chaosknoten.png}
+    \end{center}	
+    \begin{itemize}
+      \item<1-> Verein wurde 1981 gegr"undet (\url{https://ccc.de})          
+      \item<2-> Aktuell ca. 4500 Mitglieder
+      \item<3-> Betreibt u.a. "Offentlichkeitsarbeit und Politikberatung      
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Chaos Computer Club}
+  \begin{figure}
+    \includegraphics[height=0.7\textheight]{img/fingerabdruck.jpg}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Chaos Computer Club}
+  \begin{figure}
+    \includegraphics[height=0.7\textheight]{img/trojaner.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Chaos Computer Club}
+    \begin{center}
+	\includegraphics[height=0.1\textheight]{img/c3d2_logo.png}
+    \end{center}
+    \begin{itemize}
+      \item<1-> Chaos Computer Club Dresden (\url{https://c3d2.de})          
+      \item<2-> Datenspuren: 24./25. Oktober 2015 (\url{https://datenspuren.de})
+      \item<3-> Podcasts (\url{https://c3d2.de/radio.html})
+      \item<4-> Chaos macht Schule (\url{https://c3d2.de/schule.html})
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Bundespräsident Gauck zur NSA-Überwachung}
+    \begin{center}
+      ``Wir wissen z.B., dass es nicht so ist, wie bei der Stasi und dem KGB, dass es dicke Aktenbände gibt, wo unsere Gesprächsinhalte alle aufgeschrieben und schön abgeheftet sind. Das ist es nicht.''
+      (Gauck, 30.06.2013 im ZDF-Sommerinterview)
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Stasi vs. NSA}
+    \begin{center}
+      \includegraphics[height=0.7\textheight]{img/akten1.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Stasi vs. NSA}
+    \begin{center}
+      \includegraphics[height=0.7\textheight]{img/akten2.png}
+    \end{center}
+\end{frame}
+
+\section{Gefahren}
+\subsection{}
+
+\begin{frame}
+  \frametitle{Wer sind potenzielle Angreifer?}
+  \begin{itemize}
+    \item<1-> Andere Nutzer eines Dienstes
+    \item<2-> Fremde (``Hacker'')
+    \item<3-> Dienstanbieter
+    \item<4-> staatliche Institutionen, Netzbetreiber
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was ist zu schützen?}
+  \begin{itemize}
+    \item<1-> Kommunikation 
+    \begin{itemize}
+      \item<3-> Wer? (Nutzer-Nutzer, Nutzer-Dienst, Dienst-Dienst)
+      \item<4-> Was? (Inhalte, Metadaten)
+    \end{itemize}
+    \item<2-> Verhalten von Software/Endgeräten
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Metadaten im WWW}
+    \begin{center} 
+        \includegraphics<1>[width=0.7\textwidth]{img/lightbeam_1.png}
+        \includegraphics<2>[width=0.7\textwidth]{img/lightbeam_2.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Metadaten - VDS}
+  \begin{itemize}
+    \item Handynetz
+      \begin{itemize}
+        \item Telefonnummern
+        \item Zeitpunkt und Dauer (Telefonate, SMS)
+        \item Funkzelle (Ort)
+      \end{itemize}
+    \item Internet
+      \begin{itemize}
+        \item IP-Adresse (= ungefährer Ort)
+        \item Alle Verbindungen
+        \item Email: Adressen von Sender und Empfänger, Zugriff
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Metadaten - VDS}
+    \includegraphics[height=0.7\textheight]{img/maltespitz.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Google Takeout}
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]<1>{img/google_heat_1.png}
+      \includegraphics[width=0.8\textwidth]<2>{img/google_heat_2.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Zeitstempel}
+    \begin{center}
+      \only<1>{
+        \includegraphics[width=0.9\textwidth]{img/punch_1.png}
+        \\ \hfill \small Alan, Microblogging
+      }
+
+      \only<2>{
+        \includegraphics[width=0.9\textwidth]{img/punch_2.png}
+        \\ \hfill \small Bob, Microblogging
+      }
+
+      \only<3>{
+        \includegraphics[width=0.9\textwidth]{img/punch_3.png}
+        \\ \hfill \small Charlie, Github
+      }
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was ist zu schützen?}
+  \begin{itemize}
+    \item<1-> Kommunikation 
+    \begin{itemize}
+      \item<1-> Wer? (Nutzer-Nutzer, Nutzer-Dienst, Dienst-Dienst)
+      \item<1-> Was? (Inhalte, Metadaten)
+    \end{itemize}
+  \item<1-> Verhalten von Software/Endgeräten
+    \begin{itemize}
+      \item<2-> Schwachstellen
+      \item<3-> Backdoors
+      \item<4-> Offizielle Funktionalität
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Schadhafte Funktionalität}
+    \begin{center}
+      \includegraphics[width=0.7\textwidth]{img/windows10.png}
+    \end{center}
+\end{frame}
+
+\section{Gegenmaßnahmen}
+\subsection{}
+
+\begin{frame}
+  \frametitle{Was tun? (4 Punkte)}
+  \begin{itemize}
+    \item Verschlüsselung nutzen (Inhalte)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Verschlüsselung zum Dienst: SSL}
+    \begin{center}
+      \includegraphics[height=0.6\textheight]{img/ssl_special.png}
+      \\
+      \vspace{3mm}
+      Browser-Plugin: HTTPS Everywhere
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ende-zu-Ende-Verschlüsselung}
+  \begin{itemize}
+    \item<1-> GPG für E-Mails
+    \item<2-> OTR für Jabber:
+      \begin{itemize}
+        \item Pidgin mit OTR-Plugin für Linux und Windows
+        \item ChatSecure oder Xabber für Android
+        \item Adium für Mac, ChatSecure für iOS
+      \end{itemize}
+    \item<3-> palava.tv, talky.io, Tox, Linphone für Videotelefonie
+    \item<4-> Signal
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{E-Mail-Selbstverteidigung}
+  \begin{center}
+    \includegraphics[height=0.5\textheight]{img/emailselfdefense.png}
+    \begin{itemize}
+      \item https://emailselfdefense.fsf.org/de/
+    \end{itemize}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Signal}
+    \begin{center}
+      \includegraphics[height=6cm]{img/textsecure1.png}
+      \hspace{0.5cm}
+      \includegraphics[height=6cm]{img/textsecure2.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was tun? (4 Punkte)}
+  \begin{itemize}
+    \item Verschlüsselung nutzen (Inhalte)
+    \item Anonymisieren (Metadaten)
+  \end{itemize}
+\end{frame}
+ 
+\begin{frame}
+  \frametitle{Tor Browser}
+  \begin{center}
+    \includegraphics[height=0.8\textheight]{img/torbrowser1.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Disconnect (zum Verstecken der Websiteaufrufe)}
+  \begin{center}
+    \includegraphics[height=0.7\textheight]{img/disconnectme.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was tun? (4 Punkte)}
+  \begin{itemize}
+    \item Verschlüsselung nutzen (Inhalte)
+    \item Anonymisieren (Metadaten)
+    \item Eigene Dienste betreiben (Inhalte + Metadaten)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Dezentralisierung}
+  \begin{itemize}
+    \item Idee:
+    \begin{itemize}
+      \item<1-> Nutzerdaten nicht an Drittdienste abgeben
+      \item<2-> Kein zentraler Ort für Daten
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Dezentrale Dienste}
+    \begin{columns}
+        \begin{column}{5cm}
+            \begin{center}
+                \includegraphics[height=0.2\textheight]{img/mail.pdf} \\
+                E-Mail \\
+                \vspace{1cm}
+                \includegraphics[height=0.2\textheight]{img/jabber.png}
+            \end{center}
+        \end{column}
+        \begin{column}{5cm}
+            \begin{center}
+                \includegraphics[height=0.2\textheight]{img/owncloud.png} \\
+                \vspace{1cm}
+                \includegraphics[width=0.8\textwidth]{img/sandstorm.png}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+ 
+\begin{frame}
+  \frametitle{Was tun? (4 Punkte)}
+  \begin{itemize}
+    \item Verschlüsselung nutzen (Inhalte)
+    \item Anonymisieren (Metadaten)
+    \item Eigene Dienste betreiben (Inhalte + Metadaten)
+    \item Endgeräte schützen
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Geräte schützen}
+  \begin{itemize}
+    \item<1-> Grundlagen IT-Sicherheit (Passwörter, Medienverständnis)
+    \item<2-> Aktuelle Software
+    \item<3-> Vertrauenswürdige Software
+    \begin{itemize}
+      \item<4-> Open Source ist transparenter, anpassbarer und funktional oft ebenbürtig
+      \item<5-> verhindert Abhängigkeiten
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Fazit}
+\subsection{}
+
+\begin{frame}
+  \frametitle{Fazit}
+  \begin{center}
+    \begin{itemize}
+      \item Verschlüsselung nutzen (Inhalte)
+      \item Anonymisieren (Metadaten)
+      \item Eigene Dienste betreiben (Inhalte + Metadaten)
+      \item Endgeräte schützen
+      \item<2-> ...mit gutem Vorbild vorangehen
+    \end{itemize}
+
+    \vspace{5mm}
+    \href{https://github.com/c3d2/cms-nsa}{Folien}: \href{https://creativecommons.org/licenses/by-sa/4.0/}{\cc{by-sa}} Chaos Computer Club Dresden \\
+    \vspace{4mm}
+    CMS Dresden: schule@c3d2.de
+  \end{center}
+\end{frame}
+
+\end{document}
