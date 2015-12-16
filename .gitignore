@@ -31,5 +31,5 @@
 *.xdy
 *.tdo
 *.swp
-out
-img/*.pdf
+*/img/*.pdf
+!*/out/*.pdf
