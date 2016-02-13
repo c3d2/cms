@@ -1,0 +1,35 @@
+\documentclass[a5paper]{scrartcl}
+
+\usepackage{hyperref}
+
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[left=10mm, right=10mm, top=10mm, bottom=10mm]{geometry}
+
+\begin{document}
+
+%%\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Dies ist eine druckfreundliche Version des Handouts. Sie beinhaltet die Vorder-
+%% und Rueckseite jeweils zweimal. So kann das PDF auf A4 doppelseitig ausgedruckt werden.
+%% Das A4-Blatt kann dann in der Mitte zerschnitten werden, sodass zwei A5-Flyer entstehen.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{./src/includes/handout_page1}
+
+\pagebreak
+
+\input{./src/includes/handout_page1}
+
+\pagebreak
+
+\input{./src/includes/handout_page2.tex}
+
+\pagebreak
+
+\input{./src/includes/handout_page2.tex}
+
+\end{document}
