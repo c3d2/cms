@@ -1,0 +1,3198 @@
+#LyX file created by tex2lyx 2.1
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+%\documentclass[20pt,handout]{beamer}
+\usetheme{Darmstadt}
+%\usepackage[german]{babel}
+\usepackage{tikz}
+\setbeamertemplate{footline}[frame number]
+
+\newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}\hspace{1mm}}
+\usepackage{ifthen}
+\newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
+\usepackage{textcomp}
+
+
+\pgfdeclareimage[height=.6cm]{c3d2logo}{./img/c3d2.pdf} 
+
+
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{main,foreground}
+\logo{\pgfputat{\pgfxy(-1,0)}{\pgfbox[center,base]{\pgfuseimage{c3d2logo}}}}
+
+
+\title{NSA, Prism und co - Wie schützt man sich vor Überwachung?}
+\author{\small Marius Melzer und Stephan Thamm\\\large Chaos Computer Club Dresden}
+\date{23.07.2014}
+
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package \usepackage{ngerman}
+\inputencoding utf8
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks 0
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 0
+\pdf_pdfborder 0
+\pdf_colorlinks 0
+\pdf_backref section
+\pdf_pdfusetitle 0
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Einleitung
+\end_layout
+
+\begin_layout Subsection
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Chaos Computer Club
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset Graphics 
+	filename img/fingerabdruck.jpg
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Chaos Computer Club
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset Graphics 
+	filename img/trojaner.png
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Chaos Computer Club
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+<1-> Chaos Computer Club Dresden (
+\begin_inset Flex Flex:URL
+status collapsed
+
+\begin_layout Plain Layout
+http://c3d2.de
+\end_layout
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_deeper
+\begin_layout NoteItem
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+<2-> Datenspuren: 13./14.09.2014 
+\begin_inset Flex Flex:URL
+status collapsed
+
+\begin_layout Plain Layout
+http://datenspuren.de
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+<3-> Podcasts (
+\begin_inset Flex Flex:URL
+status collapsed
+
+\begin_layout Plain Layout
+http://pentamedia.de
+\end_layout
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Itemize
+<4-> Chaos macht Schule 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Bundespräsident Gauck zur NSA-Überwachung
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Quotes eld
+\end_inset
+
+Wir wissen z.B., dass es nicht so ist, wie bei der Stasi und dem KGB, dass es dicke Aktenbände gibt, wo unsere Gesprächsinhalte alle aufgeschrieben und schön abgeheftet sind. Das ist es nicht.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Stasi vs. NSA
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/akten1.png
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Stasi vs. NSA
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/akten2.png
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Merkels Handy
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/heise-merkel.png
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+NSA-Skandal
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/snowden.jpg
+	height 70theight%
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\size small
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Grafik"
+target "https://commons.wikimedia.org/wiki/File:Edward_Snowden.jpg#mediaviewer/File:Edward_Snowden-2.jpg"
+
+\end_inset
+
+: 
+\begin_inset CommandInset href
+LatexCommand href
+name "cc{by}"
+target "https://creativecommons.org/licenses/by/3.0/"
+
+\end_inset
+
+Laura Poitras / Praxis Films
+\size default
+ 
+\end_layout
+
+\begin_layout Section
+Kommunikation
+\end_layout
+
+\begin_layout Subsection
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Tempora
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/spiegel-tempora.png
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Mail
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/telekom_mail.png
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Verschlüsselung: Analogie
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/bote.jpg
+	height 70theight%
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\size small
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Grafik"
+target "http://commons.wikimedia.org/wiki/File:Reitbote.jpg"
+
+\end_inset
+
+: 
+\begin_inset CommandInset href
+LatexCommand href
+name "cc{by-sa}"
+target "http://creativecommons.org/licenses/by-sa/2.5/deed.en"
+
+\end_inset
+
+Ronald Preuss
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Verschlüsselung: Asymmetrische
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename <
+	height 70theight%
+
+\end_inset
+
+2->
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+img/asymencryption.png
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+SSL / TLS
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+<2-> SSL = Secure Socket Layer 
+\end_layout
+
+\begin_layout Itemize
+<3-> eingesetzt im Web, Mail, ... 
+\end_layout
+
+\begin_layout Itemize
+<4-> hierarchische Struktur 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+SSL im Browser
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/ssl_verified.png
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+SSL im Browser
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/ssl_special.png
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+SSL im Browser
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/ssl_unverified.png
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Zertifizierungsstellen
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename <
+	height 5cm
+
+\end_inset
+
+2->
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+img/zertifikate.png
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+HTTPS Everywhere
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/https-everywhere.png
+	height 5cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%% http://www.theconnectivist.com/2013/06/the-expanding-consolidation-of-the-consumer-internet/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Inhalte
+\end_layout
+
+\begin_layout Subsection
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Prism
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/prism.jpg
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Dezentrale Dienste
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Columns
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{column}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+5cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Columns
+\align center
+
+\begin_inset Graphics 
+	filename img/mail.pdf
+	height 20theight%
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ E-Mail 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset VSpace 1cm
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename img/jabber.png
+	height 20theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Columns
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{column}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{column}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+5cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Columns
+\align center
+
+\begin_inset Graphics 
+	filename img/bitmessagelogo.png
+	height 20theight%
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ Bitmessage 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset VSpace 1cm
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename img/palava-tv.png
+	width 80text%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Columns
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{column}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Lavabit
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/heise_lavabit.png
+	height 60theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Ende-zu-Ende-Verschlüsselung I
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_deeper
+\begin_layout Standard
+
+\size larger
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size larger
+Email: GPG = Gnu Privacy Guard 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Thunderbird: Enigmail 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Outlook: Gpg4win 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Apple Mail: GPGTools 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+Web: Mailvelope (Firefox, Chrome) 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Ende-zu-Ende-Verschlüsselung II
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+<2-> OTR für Jabber: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Pidgin mit OTR-Plugin für Linux und Windows 
+\end_layout
+
+\begin_layout Itemize
+GibberBot oder Xabber für Android 
+\end_layout
+
+\begin_layout Itemize
+Adium für Mac, ChatSecure für iOS 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+<3-> palava.tv für Videotelefonie 
+\end_layout
+
+\begin_layout Itemize
+<4-> Redphone für Handytelefonate (Android) 
+\end_layout
+
+\begin_layout Itemize
+<5-> TextSecure für Nachrichten (Android) 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Authentifizierung
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/auth.png
+	height 5cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+TextSecure
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/textsecure1.png
+	height 6cm
+
+\end_inset
+
+ 
+\begin_inset space \hspace{}
+\length 0.5cm
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename img/textsecure2.png
+	height 6cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Metadaten
+\end_layout
+
+\begin_layout Subsection
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Vorratsdatenspeicherung (USA)
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/netzpolitik-verizon.png
+	height 5cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Vorratsdatenspeicherung (Deutschland)
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/tagesschau-vds.png
+	height 5cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Metadaten
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+Handynetz 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Telefonnummern 
+\end_layout
+
+\begin_layout Itemize
+Zeitpunkt und Dauer (Telefonate, SMS) 
+\end_layout
+
+\begin_layout Itemize
+Funkzelle (Ort) 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Internet 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+IP-Adresse 
+\end_layout
+
+\begin_layout Itemize
+Alle Verbindungen 
+\end_layout
+
+\begin_layout Itemize
+Email: Adressen von Sender und Empfänger, Zugriff 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Metadaten
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/metadaten_studie.png
+	height 5cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Metadaten
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/maltespitz.png
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Metadaten
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/wekillpeople.jpg
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Tor
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/tor1.png
+	height 70theight%
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\size small
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Grafik"
+target "https://www.torproject.org/images/htw1.png"
+
+\end_inset
+
+: 
+\begin_inset CommandInset href
+LatexCommand href
+name "cc{by}"
+target "https://creativecommons.org/licenses/by/3.0/us/"
+
+\end_inset
+
+The Tor Project
+\size default
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Tor
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/tor2.png
+	height 70theight%
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\size small
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Grafik"
+target "https://www.torproject.org/images/htw2.png"
+
+\end_inset
+
+: 
+\begin_inset CommandInset href
+LatexCommand href
+name "cc{by}"
+target "https://creativecommons.org/licenses/by/3.0/us/"
+
+\end_inset
+
+The Tor Project
+\size default
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Tor
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/tor3.png
+	height 70theight%
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\size small
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Grafik"
+target "https://www.torproject.org/images/htw3.png"
+
+\end_inset
+
+: 
+\begin_inset CommandInset href
+LatexCommand href
+name "cc{by}"
+target "https://creativecommons.org/licenses/by/3.0/us/"
+
+\end_inset
+
+The Tor Project
+\size default
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Tor
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/tor-banner.png
+	height 50theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%    
+\backslash
+frametitle{Zensur}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%    
+\backslash
+includegraphics[height=0.7
+\backslash
+textheight]{img/zensur.png}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%    
+\backslash
+
+\backslash
+{
+\backslash
+small 
+\backslash
+href{http://upload.wikimedia.org/wikipedia/commons/5/51/RWB-PressFreedomIndex2013-WorldMap.svg}{Grafik}: 
+\backslash
+href{http://creativecommons.org/licenses/by-sa/3.0/deed.en}{
+\backslash
+cc{by-sa}} Jeff Ogden (W163)}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Tor in Deutschland
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/torgermany.jpg
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Anonymität unter Vollüberwachung
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/torstinks.png
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Torroristen
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/torrorist.png
+	width 80theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% =================== Ende Stephan, Anfang Marius =================
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Metadaten - Lightbeam
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/lightbeam.png
+	height 70theight%
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\size small
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Grafik:"
+target "http://www.flickr.com/photos/8517757@N03/10538205035/in/photolist-h4e4dg"
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "cc{by-sa}"
+target "http://creativecommons.org/licenses/by-sa/3.0/deed.en"
+
+\end_inset
+
+Clint Lalonde
+\size default
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Metadaten - Disconnect
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Graphics 
+	filename img/disconnectme.jpg
+	height 70theight%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Geschäftsmodelle
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\begin_inset Flex Flex:Uncover
+status collapsed
+
+\begin_layout Standard
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset Graphics 
+	filename img/business_pigs.jpg
+	height 60theight%
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+license[http://geekandpoke.typepad.com/geekandpoke/2010/12/the-free-model.html]{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cc{
+\end_layout
+
+\end_inset
+
+by-sa
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Freie Software
+\end_layout
+
+\begin_layout Subsection
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Backdoors in Windows
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/backdoor-windows
+	width 10cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Backdoors in Windows
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/backdoor-windows2
+	width 10cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Backdoors in iOS
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/backdoor-ios
+	width 7cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Backdoors in Apps
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/backdoor-apps
+	width 7cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Backdoors in Android
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/backdoor-android
+	width 10cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Backdoors in Apps
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/backdoor-av
+	width 10cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Backdoors in Apps
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/backdoor-flashlight
+	width 10cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Backdoors in Apps
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/backdoor-samsung
+	width 10cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Backdoors in Apps
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/backdoor-samsung2
+	width 8cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Kompilierung von Software
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/compilation-process
+	width 10cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Probleme von proprietärer Software
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+<2-> Kontrolle unterliegt einer Organisation 
+\end_layout
+
+\begin_layout Itemize
+<3-> Transparenz und Sicherheit 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Strategien moderner IT-Unternehmen
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+<2-> Hardware 
+\end_layout
+
+\begin_layout Itemize
+<3-> Software 
+\end_layout
+
+\begin_layout Itemize
+<4-> Internetdienste 
+\end_layout
+
+\begin_layout Itemize
+<5-> ... aus einer Hand 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Strategien moderner IT-Unternehmen
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+<2-> Fehlende Interoperabilität 
+\end_layout
+
+\begin_layout Itemize
+<3-> vorgegebene Dienste und Programme 
+\end_layout
+
+\begin_layout Itemize
+<4-> keine ausreichenden Nutzerrechte 
+\end_layout
+
+\begin_layout Itemize
+<5-> Kopierschutz, Online-Zwang, ... 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Strategien moderner IT-Unternehmen
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Quotes eld
+\end_inset
+
+Tie all of our products together, so we further lock customers into our ecosystem
+\begin_inset Quotes erd
+\end_inset
+
+ (Steve Jobs) 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+Das GNU Projekt
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+Begonnen von Richard Stallman im Jahr 1984 
+\end_layout
+
+\begin_layout Itemize
+Gründung der Free Software Foundation im Jahr 1985 
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Column
+7cm
+\end_layout
+
+\end_deeper
+\begin_layout Columns
+\align center
+
+\begin_inset Graphics 
+	filename img/stallman
+	width 4.5cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Columns
+\align center
+
+\begin_inset Graphics 
+	filename img/logo-fsf
+	width 5cm
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+LibreOffice
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+Textverarbeitung 
+\end_layout
+
+\begin_layout Itemize
+Tabellenkalkulation 
+\end_layout
+
+\begin_layout Itemize
+Präsentationen 
+\end_layout
+
+\begin_layout Itemize
+Formeleditor 
+\end_layout
+
+\begin_layout Itemize
+nutzt Open Document Format zur Speicherung 
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\end_deeper
+\begin_layout Columns
+\align center
+
+\begin_inset Graphics 
+	filename img/LibreOffice
+	width 5cm
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+Freie Software für Android
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\end_deeper
+\begin_layout Columns
+
+\series bold
+F-Droid
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Installationsdienst für freie Android-Software 
+\end_layout
+
+\end_deeper
+\begin_layout Columns
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Columns
+
+\series bold
+TextSecure
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Verschlüsselter Nachrichtenaustausch 
+\end_layout
+
+\begin_layout Itemize
+Verschlüsselte Speicherung 
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\end_deeper
+\begin_layout Columns
+\align center
+
+\begin_inset Graphics 
+	filename img/F-Droid_Logo_2
+	width 2cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Columns
+\align center
+
+\begin_inset Graphics 
+	filename img/TextSecure_Icon
+	width 2cm
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+Replicant
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+basiert auf Android 
+\end_layout
+
+\begin_layout Itemize
+Ziel, alle proprietären Komponenten durch freie zu ersetzen 
+\end_layout
+
+\begin_layout Itemize
+Einbindung von F-Droid 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Problem:
+\series default
+ Verlust der Garantie bei Installation 
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\end_deeper
+\begin_layout Columns
+\align center
+
+\begin_inset Graphics 
+	filename img/Replicant_logo_alpha
+	width 2cm
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+Linux
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_deeper
+\begin_layout Column
+8cm
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+Weit verbreitet als Server-Betriebssystem 
+\end_layout
+
+\begin_layout Itemize
+Bekannte Desktop-Varianten:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Ubuntu/Debian Linux 
+\end_layout
+
+\begin_layout Itemize
+OpenSUSE 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Können als Live-System ausprobiert werden 
+\end_layout
+
+\begin_layout Itemize
+Integrierte Software für Verschlüsselung, Webbrowsing, E-Mail, Textverarbeitung etc. 
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Column
+6cm
+\end_layout
+
+\end_deeper
+\begin_layout Columns
+\align center
+
+\begin_inset Graphics 
+	filename img/Tux
+	width 3cm
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Linux
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\begin_inset Graphics 
+	filename img/gnome
+	width 10cm
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Verhalten
+\end_layout
+
+\begin_layout Subsection
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Datensparsamkeit
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+<2-> Viele Daten zusammen ergeben Profile 
+\end_layout
+
+\begin_layout Itemize
+<3-> Werden die Daten gebraucht? 
+\end_layout
+
+\begin_layout Itemize
+<4-> Werden echte Daten gebraucht? 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+<5-> Pseudonymität 
+\end_layout
+
+\begin_layout Itemize
+<6-> mailinator.com (Wegwerf-Email-Adresse) 
+\end_layout
+
+\begin_layout Itemize
+<7-> frank-geht-ran.de (Wegwerf-Telefonnummer) 
+\end_layout
+
+\begin_layout Itemize
+<8-> bugmenot.com (Fake Accounts) 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Passwörter
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Itemize
+<2-> Keine einfachen Wörter 
+\end_layout
+
+\begin_layout Itemize
+<3-> Groß-, Kleinbuchstaben, Ziffern, Sonderzeichen 
+\end_layout
+
+\begin_layout Itemize
+<4-> Beispiele: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+<5-> dragon 
+\end_layout
+
+\begin_layout Itemize
+<6-> (nCuAj.§Tsm!f 
+\end_layout
+
+\begin_layout Itemize
+<7-> IchLiebeDich 
+\end_layout
+
+\begin_layout Itemize
+<8-> .§)=/)=` 
+\end_layout
+
+\begin_layout Itemize
+<9-> qwerty 
+\end_layout
+
+\begin_layout Itemize
+<10-> Mks?o/.u,1Psw! 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+<12-> Verschiedene Passwörter nutzen! 
+\end_layout
+
+\begin_layout Itemize
+<13-> Passwort-Manager verwenden 
+\begin_inset Newline newline
+\end_inset
+
+ (z.B. Keepass, Password Safe) 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset Note Note
+status closed
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+Diskussion
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\align center
+
+\size larger
+Diskussion
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset VSpace 5mm
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Folien"
+target "https://github.com/c3d2/cms-nsa"
+
+\end_inset
+
+: 
+\begin_inset CommandInset href
+LatexCommand href
+name "cc{by-sa}"
+target "https://creativecommons.org/licenses/by-sa/4.0/"
+
+\end_inset
+
+Chaos Computer Club Dresden 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset VSpace 4mm
+\end_inset
+
+ CMS Dresden: schule@c3d2.de 
+\end_layout
+
+\end_body
+\end_document
