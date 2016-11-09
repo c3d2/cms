@@ -1,0 +1,612 @@
+\documentclass[12pt, xcolor={svgnames,table}]{beamer}
+%\documentclass[20pt,handout]{beamer}
+\usetheme{Darmstadt}
+\usepackage{graphicx}
+%\usepackage[german]{babel}
+\usepackage{ngerman}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\setbeamertemplate{footline}[frame number]
+
+\newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}\hspace{1mm}}
+\usepackage{ifthen}
+\newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
+\usepackage{textcomp}
+\usepackage{hyperref}
+
+\pgfdeclareimage[height=.6cm]{c3d2logo}{./img/c3d2.pdf}
+
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{main,foreground}
+\logo{\pgfputat{\pgfxy(-1,0)}{\pgfbox[center,base]{\pgfuseimage{c3d2logo}}}}
+
+\title{Digitale Selbstverteidigung}
+\author{\small Marius \\\large Chaos Computer Club Dresden}
+\date{22.06.2016}
+
+\begin{document}
+\maketitle
+
+\section{Einleitung}
+\subsection{}
+
+\begin{frame}
+    \frametitle{Chaos Computer Club}
+    \begin{center}
+	\includegraphics[height=0.2\textheight]{img/chaosknoten.png}
+    \end{center}	
+    \begin{itemize}
+      \item<1-> Verein wurde 1981 gegr"undet (\url{https://ccc.de})
+      \item<2-> Aktuell > 6000 Mitglieder
+      \item<3-> Technologie zum gesellschaftlichen Nutzen (und nicht ihrem Schaden)
+      \item<4-> Betreibt u.a. "Offentlichkeitsarbeit und Politikberatung
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Chaos Computer Club}
+  \begin{figure}
+    \includegraphics[height=0.7\textheight]{img/fingerabdruck.jpg}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Chaos Computer Club}
+  \begin{figure}
+    \includegraphics[height=0.7\textheight]{img/trojaner.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Chaos Computer Club}
+    \begin{center}
+	\includegraphics[height=0.1\textheight]{img/c3d2_logo.png}
+    \end{center}
+    \begin{itemize}
+      \item<1-> Chaos Computer Club Dresden (\url{https://c3d2.de})
+      \item<2-> Datenspuren: Herbst 2016 (\url{https://datenspuren.de})
+      \item<3-> Podcasts (\url{https://c3d2.de/radio.html})
+      \item<4-> IT4Refugees
+      \item<5-> Chaos macht Schule (\url{https://c3d2.de/schule.html})
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Bundespräsident Gauck zur NSA-Überwachung}
+    \begin{center}
+      ``Wir wissen z.B., dass es nicht so ist, wie bei der Stasi und dem KGB, dass es dicke Aktenbände gibt, wo unsere Gesprächsinhalte alle aufgeschrieben und schön abgeheftet sind. Das ist es nicht.''
+      (Gauck, 30.06.2013 im ZDF-Sommerinterview)
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Stasi vs. NSA}
+    \begin{center}
+      \includegraphics[height=0.7\textheight]{img/akten1.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Stasi vs. NSA}
+    \begin{center}
+      \includegraphics[height=0.7\textheight]{img/akten2.png}
+    \end{center}
+\end{frame}
+
+\section{Internet}
+\subsection{}
+
+\begin{frame}
+    \frametitle{Wie kommunizieren wir im Internet?}
+    \begin{center}
+      \includegraphics[height=5cm]{img/c-s.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Föderation}
+    \begin{center}
+      \includegraphics[height=5cm]{img/fed.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Server im Rechenzentrum}
+    \begin{center}
+      \includegraphics[height=5cm]{img/data_center.jpg}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Internetknoten (Router)}
+    \begin{center}
+      \includegraphics[height=5cm]{img/internet_cable_map.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Internetknoten (DE-CIX in Frankfurt)}
+    \begin{center}
+      \includegraphics[height=5cm]{img/de_cix.jpg}
+      \\{\small \href{https://de.wikipedia.org/wiki/DE-CIX\#/media/File:DE-CIX\_GERMANY\_-\_Switch\_Rack\_\%286218137120\%29.jpg}{Grafik}: \href{https://creativecommons.org/licenses/by-sa/2.0/}{\cc{by-sa} Stefan Funke}}
+    \end{center}
+\end{frame}
+
+\section{Gerätesicherheit}
+\subsection{}
+
+\begin{frame}
+    \frametitle{Unerwünschte Funktionalität}
+    \begin{center}
+      \includegraphics[width=0.7\textwidth]{img/windows10.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Unerwünschte Funktionalität}
+  \begin{center}
+    \includegraphics[width=7cm]{img/backdoor-apps}
+  \par\end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Wie schütze ich meine Geräte?}
+    \begin{itemize}
+      \item Rechte von Applikationen einschränken (Permissions, Firewall)
+      \item Aktuelle und vertrauenswürdige Software
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Permissions}
+  \begin{columns}
+    \column{5.5cm}
+    \footnotesize
+
+    \textbf{Android}\\
+    Einstellungen -> Apps -> Appname -> Berechtigungen ändern\\
+    \vspace{0.2cm}
+    Einstellungen -> Apps -> Zahnrad -> Appberechtigungen\\
+    \vspace{0.5cm}
+
+    \textbf{iOS}\\
+    Einstellungen -> Privatsphäre -> Berechtigungsname\\
+    \vspace{0.5cm}
+
+    In den neuesten Versionen: Entscheidung bei erster Benutzung
+
+    \column{5cm}
+
+    \begin{center}
+      \includegraphics[width=3.5cm]{img/permissions-android.png}
+    \par\end{center}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Freie Software auf Computern}
+    \begin{columns}
+        \begin{column}{5cm}
+            \begin{center}
+                \includegraphics[height=0.2\textheight]{img/firefox.png} \\
+                Firefox \\
+                \vspace{0.1\textheight}
+                \includegraphics[height=0.2\textheight]{img/libreoffice.jpg}\\
+                LibreOffice
+            \end{center}
+        \end{column}
+        \begin{column}{5cm}
+            \begin{center}
+                \includegraphics[height=0.2\textheight]{img/thunderbird.png} \\
+                Thunderbird \\
+                \vspace{0.1\textheight}
+                \includegraphics[height=0.2\textheight]{img/vlc.png}\\
+                VLC Media Player
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Freie Software auf dem Smartphone}
+  \begin{columns}
+    \column{6.5cm}
+
+    \textbf{F-Droid}\\
+    Android-Appstore für freie Software
+
+    \vspace{0.5cm}
+
+    \textbf{iOS Open Source Apps}\\
+    \url{https://github.com/dkhamsing/open-source-ios-apps}
+
+    \column{5cm}
+
+    \begin{center}
+      \includegraphics[width=2cm]{img/F-Droid_Logo_2}
+    \par\end{center}
+    \begin{center}
+    \par\end{center}
+  \end{columns}
+\end{frame}
+
+\section{Verschlüsselung}
+\subsection{}
+
+\begin{frame}
+    \frametitle{Transportwegverschlüsselung}
+    \begin{center}
+      \includegraphics[height=0.8\textheight]{img/enc-transport.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Transportwegverschlüsselung}
+      SSL = Secure Socket Layer / TLS = Transport Layer Security
+    \vfill
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]{img/tls.pdf}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{SSL im Browser}
+    \begin{center}
+      \includegraphics[height=0.7\textheight]{img/ssl_special.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Ungültiges Zertifikat}
+    \begin{center}
+	\includegraphics[height=0.7\textheight]{img/ssl_badcert.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{HTTPS Everywhere}
+    \begin{center}
+      \includegraphics[height=5cm]{img/https-everywhere.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Ende-zu-Ende-Verschlüsselung}
+    \begin{center}
+      \includegraphics[height=0.8\textheight]{img/enc-e2e.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Email-Verschlüsselung (E2E): PGP}
+  \begin{center}
+    \includegraphics[height=0.5\textheight]{img/emailselfdefense.png}
+    \begin{itemize}
+      \item https://emailselfdefense.fsf.org/de/
+    \end{itemize}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Jabber: Conversations, ChatSecure}
+    \begin{center}
+      \includegraphics[height=6cm]{img/conversations.png}
+      \hspace{0.5cm}
+      \includegraphics[height=6cm]{img/chatsecure.png}
+    \end{center}
+    \url{https://xmpp.net/directory.php}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Signal}
+    \begin{center}
+      \includegraphics[height=6cm]{img/signal1.png}
+      \hspace{0.5cm}
+      \includegraphics[height=6cm]{img/signal2.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Vergleich Messenger}
+  \small
+  \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+                      & Whatsapp            & Threema             & Telegram              & Signal                & Jabber              \\
+    \hline
+    Verschlüsselung   & \cellcolor{green}  & \cellcolor{yellow}   & \cellcolor{orange}    & \cellcolor{green}     & \cellcolor{green}   \\
+    \hline
+    Vertrauensw.      & \cellcolor{red}     & \cellcolor{yellow}  & \cellcolor{orange}    & \cellcolor{green}     & \cellcolor{green}   \\
+    \hline
+    Dezentr.          & \cellcolor{red}     & \cellcolor{red}     & \cellcolor{red}       & \cellcolor{orange}    & \cellcolor{green}   \\
+    \hline
+    Open Source       & \cellcolor{red}     & \cellcolor{orange}  & \cellcolor{yellow}    & \cellcolor{green}     & \cellcolor{green}   \\
+    \hline
+    Mobileignung      & \cellcolor{green}   & \cellcolor{green}   & \cellcolor{green}     & \cellcolor{green}     & \cellcolor{yellow}  \\
+    \hline
+  \end{tabular}
+\end{frame}
+
+\section{Metadaten}
+\subsection{}
+
+\begin{frame}
+  \frametitle{Metadaten - Vorratsdatenspeicherung}
+  \begin{itemize}
+    \item Handynetz
+      \begin{itemize}
+        \item Telefonnummern
+        \item Zeitpunkt und Dauer (Telefonate, SMS)
+        \item Funkzelle (Ort)
+      \end{itemize}
+    \item Internet
+      \begin{itemize}
+        \item IP-Adresse (= ungefährer Ort)
+        \item Alle Verbindungen
+        \item Email: Adressen von Sender und Empfänger, Zugriff
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Metadaten - VDS}
+    \includegraphics[height=0.7\textheight]{img/maltespitz.png}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Google Takeout}
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]<1>{img/google_heat_1.png}
+      \includegraphics[width=0.8\textwidth]<2>{img/google_heat_2.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Zeitstempel}
+    \begin{center}
+      \only<1>{
+        \includegraphics[width=0.9\textwidth]{img/punch_1.png}
+        \\ \hfill \small Alan, Microblogging
+      }
+
+      \only<2>{
+        \includegraphics[width=0.9\textwidth]{img/punch_2.png}
+        \\ \hfill \small Bob, Microblogging
+      }
+
+      \only<3>{
+        \includegraphics[width=0.9\textwidth]{img/punch_3.png}
+        \\ \hfill \small Charlie, Github
+      }
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Metadaten im WWW}
+    \begin{center} 
+        \includegraphics<1>[width=0.7\textwidth]{img/lightbeam_1.png}
+        \includegraphics<2>[width=0.7\textwidth]{img/lightbeam_2.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Disconnect, Privacy Badger (EFF), Ghostery}
+  \begin{center}
+    \includegraphics[height=0.7\textheight]{img/disconnectme.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Antitracking im Firefox Privatmodus}
+  \begin{center}
+    \includegraphics[height=0.7\textheight]{img/ff_antitrack.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Antitracking auf dem Handy}
+  \begin{columns}
+    \column{5.5cm}
+    \footnotesize
+
+    \textbf{Android: Google AdID}\\
+    Google-Einstellungen -> Anzeigen -> Interessensbezogene Werbung deaktivieren\\
+    \vspace{0.5cm}
+
+    \textbf{iOS: Apple IDFA}\\
+    Einstellungen -> Datenschutz -> Werbung -> Kein Ad-Tracking\\
+    \vspace{0.5cm}
+
+    \column{5cm}
+
+    \begin{center}
+      \includegraphics[width=3.5cm]{img/google-adid.png}
+    \par\end{center}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Alternative Suchmaschinen}
+    \begin{columns}
+        \begin{column}{5cm}
+            \begin{center}
+                    \begin{itemize}
+                            \item Startpage
+                            \vspace{2cm}
+                            \item DuckDuckGo
+                    \end{itemize}
+            \end{center}
+        \end{column}
+        \begin{column}{5cm}
+            \begin{center}
+                \includegraphics[width=0.5\textwidth]{img/startp_logo.png}
+                \vspace{1cm}
+                \includegraphics[width=0.8\textwidth]{img/duckduckgo.pdf}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Alternative Kartendienste}
+    \begin{columns}
+        \begin{column}{5cm}
+            \begin{center}
+                    \begin{itemize}
+                            \item OpenStreetMap
+                            \vspace{2cm}
+                            \item OpenRouteService
+                    \end{itemize}
+            \end{center}
+        \end{column}
+        \begin{column}{5cm}
+            \begin{center}
+                \includegraphics[width=0.5\textwidth]{img/osm.png}
+                \vspace{1cm}
+                \includegraphics[width=0.8\textwidth]{img/openrouteservice.png}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Owncloud/Nextcloud}
+  \begin{center}
+    \includegraphics[width=9cm]{img/owncloud-screenshot.jpg}
+  \end{center}
+\end{frame}
+
+\section{Soziale Netzwerke}
+\subsection{}
+
+\begin{frame}
+  \frametitle{Soziale Netzwerke}
+  \begin{itemize}
+    \item Wer nutzt was?
+      \begin{itemize}
+        \item<2-> Facebook
+        \item<3-> Twitter
+        \item<4-> Whatsapp
+        \item<5-> Instagram
+        \item<6-> Snapchat
+        \item<7-> Andere?
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Firmen}
+  \begin{itemize}
+    \item Womit verdienen folgende Firmen ihr Geld?
+      \begin{itemize}
+        \item<2-> Karstadt
+        \item<3-> Amazon
+        \item<4-> Ebay
+        \item<5-> Facebook
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Gesch"aftsmodelle}
+  \begin{figure}
+    \includegraphics[height=0.7\textheight]{img/business_pigs.jpg}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Soziale Netzwerke}
+
+  \begin{itemize}
+    \item Was haben soziale Netzwerke von euch?\\(am Bsp. von Facebook)
+      \begin{itemize}
+        \item<2-> 82\% Einnahmen aus Werbung
+        \item<3-> 30\% Anteil an "`Facebook-Einkäufen"'
+        \item<4-> durchschnittlich 1€/Profil
+        \item<5-> "`Poweruser"'-Profile deutlich mehr
+        \item<6-> => Mehr Werbegewinn durch personalisierte Werbung
+        \item<7-> Q2 2014 791 Mio Dollar Gewinn
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Soziale Netzwerke}
+    \begin{itemize}
+        \item<2-> Das Internet vergisst nichts!
+        \item<3-> Was sollte man (nicht) schreiben?
+        \item<5-> Wer soll meine Infos (nicht) erhalten?
+        \item<6-> Beeinträchtigt was ich schreibe andere?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Umgangsformen}
+  \begin{itemize}
+    \item Wem sollte man was preisgeben (und was eher nicht)?
+      \begin{itemize}
+        \item<2-> "`Roadkill"' von Entertainment for the Braindead ist ein cooles Album
+        \item<3-> Ich gehe am Donnerstag, den 07.06.2012 ins Kino
+        \item<4-> Ich bin heut' echt gut drauf!
+        \item<5-> Ute Meyer war mit Carolin Wittich und Frederik Ulm am Samstag Abend in der Sportsbar und ist danach mit Michael Müller nach Hause gefahren
+        \item<6-> Meine Lehrerin ist voll doof!
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Verhalten}
+\subsection{}
+
+\begin{frame}
+    \frametitle{Datensparsamkeit}
+    \begin{itemize}
+        \item<2-> Viele Daten zusammen ergeben Profile
+        \item<3-> Verteilen der Daten, Nutzung mehrerer Dienste
+        \item<4-> Werden die Daten gebraucht?
+        \item<5-> Werden echte Daten gebraucht?
+          \begin{itemize}
+            \item<6-> Pseudonymität
+            \item<7-> mailinator.com (Wegwerf-Email-Adresse)
+            \item<8-> frank-geht-ran.de (Wegwerf-Telefonnummer)
+            \item<9-> bugmenot.com (Fake Accounts)
+          \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Passwörter}
+    \begin{itemize}
+        \item<2-> Keine einfachen Wörter
+        \item<3-> Groß-, Kleinbuchstaben, Ziffern, Sonderzeichen
+        \item<4-> Beispiele:
+            \begin{itemize}
+                \item<5-> dragon
+                \item<6-> (nCuAj.§Tsm!f
+                \item<7-> IchLiebeDich
+                \item<8-> .§)=/)=`
+                \item<9-> qwerty
+                \item<10-> Mks?o/.u,1Psw!
+            \end{itemize}
+        \item<12-> Verschiedene Passwörter nutzen!
+        \item<13-> Passwort-Manager verwenden \\ (z.B. Keepass, Password Safe)
+    \end{itemize}
+\end{frame}
+
+\section{Fazit}
+\subsection{}
+
+\begin{frame}
+  \frametitle{Fazit}
+  \begin{center}
+    \begin{itemize}
+      \item Wegverschlüsselung nutzen (auf HTTPS achten, Plugin: HTTPS Everywhere)
+      \item Ende-zu-Ende-Verschlüsselung nutzen (Email: GPG, Messenger: Signal)
+      \item Metadaten vermeiden (z.B. Alternative Dienste, Plugins: Privacy Badger oder Disconnect)
+      \item Soziale Netzwerke bewusst nutzen, auf Umgangsformen achten
+      \item Wichtig: Datenvermeidung und sichere Passwörter
+    \end{itemize}
+
+    \vspace{5mm}
+    \href{https://github.com/cms/2016_05_04_kleinzschachwitz/}{Folien}: \href{https://creativecommons.org/licenses/by-sa/4.0/}{\cc{by-sa}} Chaos Computer Club Dresden \\
+    \vspace{3mm}
+    CMS Dresden: schule@c3d2.de
+  \end{center}
+\end{frame}
+
+\end{document}
