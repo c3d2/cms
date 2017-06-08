@@ -1,0 +1,14 @@
+https://de.wikipedia.org/wiki/Deep_Blue
+https://de.wikipedia.org/wiki/AlphaGo
+
+https://www.wired.de/collection/tech/welche-social-bots-gibt-es-und-wie-funktionieren-sie
+http://www.nature.com/news/facebook-experiment-boosts-us-voter-turnout-1.11401
+https://www.nytimes.com/2016/11/08/us/politics/facebook-ads-campaign.html?_r=0
+
+http://www.slate.com/blogs/how_not_to_be_wrong/2014/06/09/big_data_what_s_even_creepier_than_target_guessing_that_you_re_pregnant.html
+https://netzpolitik.org/2017/mit-facebook-daten-vorhersagen-wer-alkohol-oder-drogen-nimmt/
+https://en.wikipedia.org/wiki/Netflix_Prize
+
+https://www.wired.com/2012/06/google-x-neural-network/
+http://www.spiegel.de/netzwelt/gadgets/inceptionism-google-forscher-geben-netzwerken-lsd-a-1039965.html
+https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html
