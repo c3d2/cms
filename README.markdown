@@ -22,7 +22,10 @@ jeweilige Vortrag gebaut werden.
 Vorrausetzungen:
 - latex
 
-bei debian zB. texlive + texlive-latex-extra
+unter debian
+- texlive
+- texlive-latex-extra
+- texlive-lang-german
 
 Genauer wird das im [Handbuch von GNU Make] beschrieben.
 <!-- Foliengenerator: https://github.com/c3d2/slidenado -->
