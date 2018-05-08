@@ -1,0 +1,16 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "make and show PDF",
+            "type": "shell",
+            "command": "~/code/c3d2/cms-git-repo/2018_05_16_Ringvorlesung_TUD_ZMM/make; evince /home/rob/code/c3d2/cms-git-repo/2018_05_16_Ringvorlesung_TUD_ZMM/out/slides.pdf",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

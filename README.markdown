@@ -20,12 +20,11 @@ In den Verzeichnissen kann mit dem Makefile über das Kommando `make` der
 jeweilige Vortrag gebaut werden.
 
 Vorrausetzungen:
-- latex
+- [make](https://de.wikipedia.org/wiki/Make)
+- [latex](https://de.wikipedia.org/wiki/LaTeX)
 
-unter debian
-- texlive
-- texlive-latex-extra
-- texlive-lang-german
+Installation unter zB. Debian:
+- $ sudo apt install make texlive texlive-latex-extra texlive-lang-german
 
 Genauer wird das im [Handbuch von GNU Make] beschrieben.
 <!-- Foliengenerator: https://github.com/c3d2/slidenado -->
