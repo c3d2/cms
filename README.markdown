@@ -18,6 +18,12 @@ Verwendung
 
 In den Verzeichnissen kann mit dem Makefile über das Kommando `make` der
 jeweilige Vortrag gebaut werden.
+
+Vorrausetzungen:
+- latex
+
+bei debian zB. texlive + texlive-latex-extra
+
 Genauer wird das im [Handbuch von GNU Make] beschrieben.
 <!-- Foliengenerator: https://github.com/c3d2/slidenado -->
 Die Weiterverwendung ist unter den Bedingungen der jeweiligen Lizenz gestattet.
