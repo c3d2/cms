@@ -6,7 +6,7 @@
         {
             "label": "make and show PDF",
             "type": "shell",
-            "command": "~/code/c3d2/cms-git-repo/2018_05_16_Ringvorlesung_TUD_ZMM/make; evince /home/rob/code/c3d2/cms-git-repo/2018_05_16_Ringvorlesung_TUD_ZMM/out/slides.pdf",
+            "command": "~/code/c3d2/cms-git-repo/2018_05_16_Ringvorlesung_TUD_ZMM/make",
             "group": {
                 "kind": "build",
                 "isDefault": true
