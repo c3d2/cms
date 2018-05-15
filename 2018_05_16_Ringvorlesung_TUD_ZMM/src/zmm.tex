@@ -2,7 +2,6 @@
 %\documentclass[20pt,handout]{beamer}
 \usetheme{Darmstadt}
 \usepackage{graphicx}
-\usepackage[labelfont={bf,sf},font={small},labelsep=space]{caption}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -25,7 +24,7 @@
 \logo{\pgfputat{\pgfxy(-1,0)}{\pgfbox[center,base]{\pgfuseimage{c3d2logo}}}}
 
 
-\title{Was mit Computern}
+\title{Chaos macht Schule}
 \author{\small Robert Wartenberg \& Johannes Lötzsch\\\large Chaos Computer Club Dresden}
 \date{16.05.2018}
 
@@ -38,7 +37,7 @@
 \begin{frame}
   \frametitle{Hacker}
   \begin{figure}
-    \includegraphics[height=0.7\textheight]{img/Glider.pdf}
+    \includegraphics[height=0.7\textheight]{img/schneeschrauber.jpg}
   \end{figure}
 \end{frame}
 
@@ -184,7 +183,8 @@
 			\includegraphics[height=0.6\textheight]{img//internet_1.png}
 		}
 		\only<3>{
-			\includegraphics[height=0.6\textheight]{img//internet_2.jpg}
+			%\includegraphics[height=0.6\textheight]{img//internet_2.jpg}
+			\includegraphics[height=0.6\textheight]{img/rack.jpg}
 		}
 	\end{center}
 \end{frame}
@@ -222,45 +222,34 @@
 \subsection{}
 
 \begin{frame}
-	\frametitle{Beispiele}
-	\begin{itemize}
-		\item<1-> Deutsch
-			\begin{itemize}
-				\item<1-> eigene Wikis lesen/schreiben
-				\item<2-> Fremdsprachler im Netz lehren
-			\end{itemize}
-		\item<2-> Mathe
-			\begin{itemize}
-				\item<2-> Verschlüselung
-				\item<1-> Lernvideos und interaktive Plattformen, Spiele
-				\item<2-> Binäres rechnen
-				\item<2-> "binär -> bool -> Matrixisplay"
-				\item<2-> Tafelbild Matrixdisplay
-			\end{itemize}
-		\item<2-> Biologie
-			\begin{itemize}
-				\item<1-> Zellolärere Automaten
-				\item<2-> KI Beispile (https://js.tensorflow.org/)
-				\item<2-> Fortbewegungsarten von Robotern studieren an Hand der Natur
-			\end{itemize}
-		\item<2-> Geschichte
-			\begin{itemize}
-				\item<1-> http://histropedia.com/timeline
-				\item<2-> Ahnenforschungswebseiten
-				\item<2-> Regionalbezug Zuse / Hoyerswerde Museeum
-				\item<2-> "Aus der Geschichte für die Zukunft lernen"
-			\end{itemize}
-		\item<2-> Sport
-			\begin{itemize}
-				\item<1-> Quantified Yourself Bewegung
-				\item<2-> Cyborgs
-			\end{itemize}
-		\item<2-> Physik
-			\begin{itemize}
-				\item<1-> 
-				\item<2-> 
-			\end{itemize}
-	\end{itemize}
+	\frametitle{Display selber bauen}
+  	\begin{figure}
+	    \only<1>{\includegraphics[height=0.7\textheight]{img/leds1.jpg}}
+	    \only<2>{\includegraphics[height=0.7\textheight]{img/leds2.jpg}}
+	    \only<3>{\includegraphics[height=0.7\textheight]{img/leds3.jpg}}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Einfache Formel, hübsche Fraktale}
+  	\begin{figure}
+	    \only<1>{
+	    	    \includegraphics[height=0.7\textheight]{img/Fractal_Broccoli.jpg}
+		    \tiny\license{https://upload.wikimedia.org/wikipedia/commons/4/4f/Fractal\_Broccoli.jpg}
+	    }
+	    \only<2>{
+		    \includegraphics[height=0.5\textheight]{img/flower-petals-fibonacci.jpg}
+		    \tiny\license{https://www.goldennumber.net/wp-content/uploads/2012/05/flower-petals-fibonacci.jpg}
+	    }
+	    \only<3>{
+	    	    \includegraphics[height=0.7\textheight]{img/snowflake.jpg}
+		    \tiny\license{http://softology.com.au/gallery/gallery.htm}
+	    }
+	    \only<4>{
+	    	    \includegraphics[height=0.7\textheight]{img/leaf.jpg}
+		    \tiny\license{http://softology.com.au/gallery/gallery.htm}
+	    }
+	\end{figure}
 \end{frame}
 
 
