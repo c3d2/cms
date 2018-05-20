@@ -20,12 +20,10 @@ deppdf: $(svgpdf)
 
 
 $(PICDIR)/%.pdf: $(PICDIR)/%.svg 
-	inkscape -z -T -A $@ $<
+	rsvg-convert -f pdf -o $@ $<
 
 
 out/%.pdf:  src/%.tex deppdf  Makefile
 	mkdir -p out
 	pdflatex  -draftmode -interaction nonstopmode -output-directory out $<
 	pdflatex -output-directory out $<
-
-
