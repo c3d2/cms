@@ -13,7 +13,7 @@
 \newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
 \usepackage{textcomp}
 
-\setbeamercovered{transparent}
+%\setbeamercovered{transparent}
 
 \pgfdeclareimage[height=.6cm]{c3d2logo}{./img/c3d2.pdf} 
 
@@ -23,8 +23,8 @@
 \logo{\pgfputat{\pgfxy(-1,0)}{\pgfbox[center,base]{\pgfuseimage{c3d2logo}}}}
 
 
-\title{Chaos macht Schule}
-\author{\small Thammi \& Nerd Norbert \& Benjamin Partzsch \\\large Chaos Computer Club Dresden}
+\title{Medienkompetenz}
+\author{\small Stephan Thamm, Nerd Norbert \& Benjamin Partzsch \\\large Chaos Computer Club Dresden}
 \date{22.05.2018}
 
 \begin{document}
@@ -33,19 +33,14 @@
 \section{Einleitung}
 \subsection{}
 
-%%% -> J03 -> %%%
+%%% -> thammi -> %%%
 
 \begin{frame}
   \frametitle{Hacker}
   \begin{figure}
-    \includegraphics[height=0.7\textheight]{img/schneeschrauber.jpg}
+    \only<2>{\includegraphics[height=0.7\textheight]{img/schneeschrauber.jpg}}
+    \only<3>{\includegraphics[height=0.7\textheight]{img/pentabug.jpg}}
   \end{figure}
-\end{frame}
-
-\begin{frame}
-	\begin{center}
-    	\includegraphics[height=0.5\textheight]{img/cms-text.png}
-    \end{center}
 \end{frame}
 
 \begin{frame}
@@ -73,47 +68,60 @@
 		\item Chaos macht Schule (\url{https://c3d2.de/schule.html})
 	\end{itemize}
 \end{frame}
-  
-%%% -> Rob -> %%%
-
-\section{CmS}
-\subsection{}
 
 \begin{frame}
-	\begin{center}
-    	\includegraphics[height=0.5\textheight]{img/cms-text.png}
-    \end{center}
-\end{frame}
-  
-\begin{frame}
-	\frametitle{Chaos macht Schule}
+	\frametitle{Was bieten wir?}
 	\begin{itemize}
-		\item<1-> seit ca. 2007
-		\item<2-> Ehrenamtlich organisiert
-		\item<3-> Bildung und Sensibilisierung
+		\item<2-> keine Pädagogen
+		\item<3-> keine Rechtsanwälte
+		\item<4-> keine technische Lösungen für soziale Probleme
+		\item<5-> Hintergrundwissen und Denkanstöße
 	\end{itemize}
 \end{frame}
   
-\begin{frame}
-	\frametitle{Zielgruppe}
-	\begin{itemize}
-		\item<1-> Schüler*innen
-		\item<2-> Lehrer*innen
-		\item<3-> Eltern 
-	\end{itemize}
-\end{frame}
-
-%%% -> thammi -> %%%
-
 \section{Soziale Medien}
 \subsection{}
 
 \begin{frame}
-	\frametitle{Privatsphäre}
+  \frametitle{Soziale Medien}
+  \begin{center}
+    \only<2>{\huge Soziale Netzwerke}
+    \only<3>{\huge Nachrichtendienste}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Kostenlos?}
+    \uncover{
+        \begin{figure}
+            \includegraphics[height=0.6\textheight]{img/business_pigs.jpg}
+            \license[http://geekandpoke.typepad.com/geekandpoke/2010/12/the-free-model.html]{\cc{by-sa}}
+    \end{figure}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Wert von Daten}
+  \begin{figure}
+    \includegraphics[height=0.7\textheight]{img/jim_verkaufen.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Personenbezogene Daten}
 	\begin{itemize}
-		\item<1-> Internet vergisst nicht
-		\item<2-> Recht an eigenen Daten
+		\item<2-> Recht auf Vergessen?
+		\item<3-> Das Internet vergisst nicht!
+		\item<4-> Bundesdatenschutzgesetz und DSGVO
+		\item<5-> Datenschutzerklärung
+		\item<6-> Datenschutzeinstellungen und Zugriffsrechte
 	\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Lock in effect}
+  \begin{center}
+    ``Tie all of our products together, so we further lock customers into our ecosystem'' (Steve Jobs)
+  \end{center}
 \end{frame}
 
 %%% -> norbert -> %%%
@@ -161,7 +169,7 @@
 	\end{itemize}
 \end{frame}
 
-%%% -> thammi -> %%%
+%%% -> benhamin -> %%%
 
 \section{Kreative Mediennutzung}
 \subsection{}
@@ -179,6 +187,9 @@
 
 %%% -> Ende -> %%%
 
+\section*{}
+\subsection*{}
+
 \begin{frame}
 	\frametitle{Ende}
 	\begin{center}
@@ -190,12 +201,6 @@
 		\item<2-> https://c3d2.de/schule.html
 		\item<3-> https://lists.c3d2.de
 	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\begin{center}
-		\includegraphics[height=0.5\textheight]{img//cms-text.png}
-	\end{center}
 \end{frame}
 
 \end{document}
