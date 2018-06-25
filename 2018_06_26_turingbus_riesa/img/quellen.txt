@@ -20,7 +20,7 @@ slub-makerspace-deutsche-digitale-bibliothek.jpg
 https://www.deutsche-digitale-bibliothek.de/content/saechsische-landesbibliothek-staats-und-universitaetsbibliothek-dresden/
 
 
-jugend_hackt_flickr_Open_Knowledge_Foundation_Deutschland_cc_by_2.0.jpg
+jugend_hackt_flickr_Open_Knowledge_Foundation_Deutschland_cc_by_20.jpg
 https://www.flickr.com/photos/okfde/42122531182/in/album-72157696920331345/
 
 camp2015-future-hacker.jpg}
@@ -43,3 +43,13 @@ http://codeweek.eu/resources/
 
 congress-chaos.jpg
 https://secure.flickr.com/photos/155322279@N02/28190667759
+
+congress-ghost.jpg
+https://secure.flickr.com/photos/155322279@N02/27664110459/
+
+
+https://www.flickr.com/photos/martinroell/146069757
+datenspuren2006.jpg
+
+jh-halle.png
+https://jugendhackt.org/events/halle/
