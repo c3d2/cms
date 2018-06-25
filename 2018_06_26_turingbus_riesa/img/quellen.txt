@@ -1,7 +1,8 @@
+
+
 rosenwerk-holzwerkstatt-Foto_Carolin_Partsch.jpg
 http://www.werkstadtladen.de/rosenwerkoffene-werkstatt/
 http://artsblogdresden.de/wp-content/uploads/2015/05/150413_RW.AUFBAU_Karo-20.jpg
-
 
 mkz-film.jpg
 http://www.medienkulturzentrum.de/seminar/kulturredaktion-temp
@@ -12,8 +13,7 @@ http://www.medienkulturzentrum.de
 medienkulturzentrum-apps-games-coding.jpg
 http://www.medienkulturzentrum.de/seminar/apps-games-coding-einsatzmoeglichkeiten-fuer-paedagogische-fachkraefte/?filter=computer/
 
-
-
+schuelerrechenzentrum2.jpg
 https://www.srz.tu-dresden.de/uploads/pics/teaser1_02.jpg
 
 slub-makerspace-deutsche-digitale-bibliothek.jpg
@@ -23,8 +23,17 @@ https://www.deutsche-digitale-bibliothek.de/content/saechsische-landesbibliothek
 jugend_hackt_flickr_Open_Knowledge_Foundation_Deutschland_cc_by_2.0.jpg
 https://www.flickr.com/photos/okfde/42122531182/in/album-72157696920331345/
 
+camp2015-future-hacker.jpg}
+https://secure.flickr.com/photos/blinkenarea/20632120901/
+
+camp2015-badge.jpg
+https://secure.flickr.com/photos/optikfluffel/19952406623/
+
 congress_flickr_Willi_Thiel_cc_by-nc-sa_2.0.jpg
 https://www.flickr.com/photos/ni-c/16001363689/
 
-camp_flickr_BlinkenArea.org_cc_by_2.0.jpg
+camp_flickr_BlinkenArea_org_cc_by_20.jpg
 https://www.flickr.com/photos/blinkenarea/20547178111/in/album-72157656744791999/
+
+
+http://codeweek.eu/resources/
