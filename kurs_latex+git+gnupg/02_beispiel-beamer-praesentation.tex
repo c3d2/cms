@@ -1,0 +1,123 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\usetheme{Dresden}
+
+\usepackage{csquotes}
+
+% wichtig: üblicherweise ungenutzte Navigationssymbole ausblenden
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Eine kleine Präsentation}
+\author{John Doe}
+\date{1970-01-01}
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\begin{frame}
+  \frametitle{Agenda}
+  \tableofcontents{}
+\end{frame}
+
+\section{Was ist eigentlich \texttt{beamer}?}
+
+\begin{frame}
+  \frametitle{Aktuell}
+  \tableofcontents[currentsection]{}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\texttt{beamer}}
+
+  \onslide<+->
+
+  Mit \texttt{beamer} kann man direkt in \LaTeX{} Präsentationen setzen, mit
+  allem drum und dran.
+
+  \onslide<+->
+
+  \bigskip{}
+
+  Auch Einblendungen sind möglich.
+
+  \onslide<+->
+
+  \bigskip{}
+
+  Und das ist nicht mal schwer!
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{und sonst so}
+
+  \onslide<+->
+
+  \begin{columns}
+    \begin{column}{0.45\linewidth}
+      \begin{itemize}
+      \item<+-> Mehrspaltig geht auch
+      \item<+-> und mit Aufzählungen!
+      \item<+-> mehr oder weniger eben alles, was \LaTeX{} kann
+      \end{itemize}
+    \end{column}
+
+    \begin{column}{0.45\linewidth}
+      \onslide<+->
+
+      Und Bilder gehen auch!
+
+      \begin{center}
+        \includegraphics[width=\linewidth]{img/tex-lion.jpg}
+      \end{center}
+
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
+\section{Was sollte man mit \texttt{beamer} nicht machen}
+
+\begin{frame}
+  \frametitle{Aktuell}
+  \tableofcontents[currentsection]{}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Don'ts}
+
+  \begin{itemize}
+  \item<+-> Videos einbetten
+  \item<+-> \enquote{lustige} Einblendungen (das geht zwar, wird aber nicht von
+    allen PDF-Viewern unterstützt)
+  \item<+-> alles, was man sowieso nicht in Präsentationen machen sollte \ldots
+  \end{itemize}
+
+\end{frame}
+
+\section{Fazit}
+
+\begin{frame}
+  \frametitle{Aktuell}
+  \tableofcontents[currentsection]{}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Und was soll das alles?}
+
+  \begin{center}
+    \LaTeX{}-\texttt{beamer} fetzt!
+  \end{center}
+
+\end{frame}
+
+\end{document}
