@@ -55,9 +55,9 @@
 \RequirePackage{listings}
 
 \lstset{
-  mathescape=true,
   texcl=true,
   commentstyle=\rm,
+  basicstyle=\tt,
   numbers=none,
   stepnumber=1,
   firstnumber=0,
@@ -66,7 +66,7 @@
   columns=fullflexible,
 }
 
-\DeclareRobustCommand{\gitcmd}[1]{`\lstinline{git #1}`}
+\DeclareRobustCommand{\gitcmd}[1]{\lstinline{git #1}}
 
 %% To-Do-Notes
 
