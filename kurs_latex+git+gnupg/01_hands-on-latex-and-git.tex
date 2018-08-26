@@ -9,52 +9,134 @@
 \begin{frame}
   \frametitle{Ziele}
 
-  \TODO{Ziele ausformulieren}
+  \onslide<+->
+
+  \begin{itemize}
+  \item Erste Erfahrungen mit \LaTeX{} sammeln;
+  \item Erste Präsentation mit \LaTeX{} erstellen;
+  \item \LaTeX{}-Präsentationen mit git verwalten.
+  \item Zusammen an einer Präsentation arbeiten.
+  \end{itemize}
 
 \end{frame}
 
 \begin{frame}
   \frametitle{Was ist \LaTeX?}
 
-  \TODO{Helikoptereinführung in \LaTeX}
+  \onslide<+->
+
+  \begin{itemize}
+  \item Markup-Sprache für den Satz vorrangig akademischer Texte;
+  \item Makro-Sammlung auf Basis von \TeX{};
+  \item Fokus auf korrekter Typographie;
+  \item Sehr vielseitig und damit hohes Verwirrungspotential;
+  \end{itemize}
 
 \end{frame}
 
 \begin{frame}
+  \frametitle{\LaTeX{}-Beispiel}
+
+  \onslide<+->
+
+  $\to$~Beispiel
+
+\end{frame}
+
+\begin{frame}[fragile]
   \frametitle{Installation}
 
-  \TODO{Kurze Erläuterung zur Installation von \LaTeX, sollte aber idealerweise
-    schon vorher gemacht werden}
+  \onslide<+->
+
+  \begin{block}{Verwirrungspotential}
+    \LaTeX{} besteht aus vielen Komponenten (Distributionen, Engines, Editor,
+    Viewer, \ldots)
+  \end{block}
+
+  \onslide<+->
+
+  \bigskip{}
+
+  \begin{block}{Distributionen}
+    \begin{itemize}
+    \item \TeX{}Live ($\to$~\url{https://www.tug.org/texlive/})
+      \begin{lstlisting}[language=Bash]
+        apt install texlive-full
+      \end{lstlisting}
+    \item Mik\TeX{} ($\to$~\url{https://miktex.org}) für Windows
+    \end{itemize}
+  \end{block}
 
 \end{frame}
 
 \begin{frame}
   \frametitle{Texteditoren}
 
-  \TODO{Kurze Liste verfügbarere \LaTeX-Editoren (aus HTW-Kurs übernehmen)}
+  \onslide<+->
+
+  \begin{block}{Wichtig!}
+    \LaTeX-Dateien sind reine \emph{Textdateien}!
+  \end{block}
+
+  \onslide<+->
+
+  Wir brauchen also einen Texteditor (am besten einen, der auch \LaTeX{}
+  versteht) \dots{} \onslide<+-> da gibt es viele!
+  \begin{itemize}
+  \item TeXstudio (Cross plattform)
+  \item TeXmaker  (Cross plattform)
+  \item Kile      (nur unter KDE)
+  \item vim mit LaTeX-suite
+  \item TeXnicCenter (nur unter Windows)
+  \item GNU Emacs mit der Erweiterung AUCTeX.
+  \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-  \frametitle{Installation von git}
+  \frametitle{Versionsverwaltung mit git}
 
-  \TODO{Was der Titel sagt}
+  \onslide<+->
+
+  \begin{block}{Vorteile von \LaTeX{}}
+    Da \LaTeX{}-Dateien reiner Text sind, lassen sie sich mit Versionskontrollen
+    kombinieren!
+  \end{block}
+
+  \onslide<+->
+
+  \begin{block}{Versionskontrolle mit git}
+    \begin{itemize}
+    \item Versionskontrolle für viele prominente Projekte (Linux-Kernel, Perl,
+      Python, Ruby, Rust, git, \ldots);
+    \item Für Programmierer gemacht, aber auch darüber hinaus vielseitig
+      einsetzbar;
+    \item Basiskonzepte: \emph{Repository}, \emph{Commit}, \emph{Branch}, \ldots
+    \item Hauptplatform *nix, unter Windows auch \enquote{benutzbar}
+    \end{itemize}
+  \end{block}
 
 \end{frame}
 
 \begin{frame}
-  \frametitle{Erstellung von Repositories}
+  \frametitle{Erstellung und Initialer Commit}
 
-  \TODO{Kurz zeigen, wie git Repositories aussehen und wie man diese anlegt;
-    \lstinline{git init}, \lstinline{git log}}
+  \onslide<+->
+
+  \begin{itemize}
+  \item<+-> \gitcmd{init} zum Anlegen eines neuen \emph{Repositories};
+  \item<+-> \gitcmd{log} zum Anzeigen des aktuellen
+  \item<+-> \gitcmd{branch} zur Anzeige des aktuellen Branches
+  \end{itemize}
 
 \end{frame}
 
 \begin{frame}
   \frametitle{Eine kleine \LaTeX-Präsentation}
 
-  \TODO{Idee: hier eine kleine Präsentation zeigen, direkt im Editor (sollte
-    hier im Repository als Datei liegen)}
+  \onslide<+->
+
+  $\to$~Beispiel: \LaTeX{}-Präsentation in Repository einchecken, Log ansehen, …
 
 \end{frame}
 
@@ -66,7 +148,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Committing}
+  \frametitle{Lokale git-Repositories}
 
   \TODO{Wie bekomme ich Änderungen ins git Repository?  \lstinline{git commit},
     \lstinline{git add}, \lstinline{git log}, \lstinline{git show},
@@ -83,6 +165,32 @@
   \item Projekt: Jeder macht eine Folie auf seinem eigenen Branch
   \item Dann ins git
   \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Änderungen holen}
+
+  \onslide<+->
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{\LaTeX{} Fundamentals}
+
+  \onslide<+->
+
+  \TODO{Ein paar grundlegende \LaTeX{}-Befehle, damit man eine eigene kleine
+    Folie machen kann}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Remote git-Repositories}
+
+  \onslide<+->
+
+  \TODO{\gitcmd{push}, \gitcmd{fetch}, Pull Requests, \gitcmd{remote}}
 
 \end{frame}
 
