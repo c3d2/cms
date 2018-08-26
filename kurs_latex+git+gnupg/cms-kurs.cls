@@ -43,10 +43,10 @@
 \ifbool{notes}{
   \setbeameroption{show notes on second screen = right}}{}
 
-\newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
-\newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}\hspace{1mm}}
+\DeclareRobustCommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
+\DeclareRobustCommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}\hspace{1mm}}
 
-\newcommand{\includedeck}[1]{\include{content/#1}}
+\DeclareRobustCommand{\includedeck}[1]{\include{content/#1}}
 
 \AfterBeginDocument{\maketitle}
 
