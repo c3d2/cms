@@ -65,3 +65,10 @@
   commentstyle={\itshape},
   columns=fullflexible,
 }
+
+\DeclareRobustCommand{\gitcmd}[1]{`\lstinline{git #1}`}
+
+%% To-Do-Notes
+
+\RequirePackage{todonotes}
+\DeclareRobustCommand{\TODO}[1]{\todo[inline]{TODO: #1}}
