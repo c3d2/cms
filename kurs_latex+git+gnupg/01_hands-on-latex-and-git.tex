@@ -39,7 +39,7 @@
 
   \onslide<+->
 
-  $\to$~Beispiel
+  → Beispiel
 
 \end{frame}
 
@@ -59,11 +59,12 @@
 
   \begin{block}{Distributionen}
     \begin{itemize}
-    \item \TeX{}Live ($\to$~\url{https://www.tug.org/texlive/})
-      \begin{lstlisting}[language=Bash]
-        apt install texlive-full
-      \end{lstlisting}
-    \item Mik\TeX{} ($\to$~\url{https://miktex.org}) für Windows
+    \item \TeX{}Live (→ \url{https://www.tug.org/texlive/}) für
+      Linux-basierte Systeme und OSX (→ Mac\TeX)
+\begin{lstlisting}[language=Bash]
+$ apt install texlive-full
+\end{lstlisting}
+    \item Mik\TeX{} (→ \url{https://miktex.org}) für Windows.
     \end{itemize}
   \end{block}
 
@@ -94,6 +95,53 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Eine kleine \LaTeX-Präsentation}
+
+  \onslide<+->
+
+  → Beispiel: \LaTeX{}-Präsentation
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Übersetzung}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item<+-> Editor: entsprechende Knöpfe drücken (ist bei allen anders …);
+  \item<+-> Kommandozeile: \lstinline{pdflatex} (eventuell mehrfach), PDF dann
+    im Viewer ansehen.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\LaTeX{} Fundamentals}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item \lstinline{\tiny}, \lstinline{\small}, \lstinline{\large},
+    \lstinline{\Large}, \lstinline{\huge}, \lstinline{\Huge} für Größenangaben
+  \item \lstinline{\texttt}, \lstinline{\textit}, \lstinline{\textsf},
+    \lstinline{\textbf}, \lstinline{\textsc}, \lstinline{\emph}, … für
+    Schriftänderungen
+  \item \lstinline=\textcolor{red}{rot}=, … für Schriftfarbenänderungen
+  \item \lstinline{itemize}, \lstinline{enumerate} für Aufzählungen
+  \item \lstinline{column}, \lstinline{columns} für Spalten auf Folien
+  \item \lstinline{\includegraphics} für Einbindung von Bildern
+  \end{itemize}
+
+  \onslide<+->
+
+  \medskip{}
+
+  → siehe Beispielpräsentation und \LaTeX-Einführung!
+
+\end{frame}
+
+\begin{frame}
   \frametitle{Versionsverwaltung mit git}
 
   \onslide<+->
@@ -119,101 +167,131 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Erstellung und Initialer Commit}
-
-  \onslide<+->
+  \frametitle{Projekt: Eine gemeinsame Präsentation}
 
   \begin{itemize}
-  \item<+-> \gitcmd{init} zum Anlegen eines neuen \emph{Repositories};
-  \item<+-> \gitcmd{log} zum Anzeigen des aktuellen
-  \item<+-> \gitcmd{branch} zur Anzeige des aktuellen Branches
+  \item Jeder macht lokal einige Folien;
+  \item Einchecken und hochladen in gemeinsames git-Repository;
+  \item Dann zu einer Präsentation zusammenführen.
   \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-  \frametitle{Eine kleine \LaTeX-Präsentation}
+  \frametitle{Erstellung von Repositories}
 
   \onslide<+->
 
-  $\to$~Beispiel: \LaTeX{}-Präsentation in Repository einchecken, Log ansehen, …
+  \begin{block}{Repository}
+    Zusammenfassung aller relevanten Dateien und deren Änderungen.
+  \end{block}
 
-\end{frame}
+  \onslide<+->
 
-\begin{frame}
-  \frametitle{Übersetzung}
-
-  \TODO{Wie übersetze ich \LaTeX-Dokumente?  (Kommandozeile, Editor)}
+  \begin{itemize}
+  \item \gitcmd{init} zum Anlegen eines neuen Repositories;
+  \item \gitcmd{log} zum Anzeigen des aktuellen
+  \item \gitcmd{branch} zur Anzeige des aktuellen Branches
+  \item \gitcmd{clone} zum Klonen bereits vorhandener Repositories
+  \end{itemize}
 
 \end{frame}
 
 \begin{frame}
   \frametitle{Lokale git-Repositories}
 
-  \TODO{Wie bekomme ich Änderungen ins git Repository?  \lstinline{git commit},
-    \lstinline{git add}, \lstinline{git log}, \lstinline{git show},
-    \lstinline{git diff} (nicht in der Reihenfolge)}
+  \onslide<+->
 
-\end{frame}
+  \begin{block}{Commit}
+    Zusammenfassung bestimmter relevanter Änderungen;
+    \enquote{Versionszwischenstände}.
+  \end{block}
 
-\begin{frame}
-  \frametitle{Eine gemeinsame Präsentation}
+  \begin{block}{Index}
+    Zwischenspeicher für Änderungen, die zu einem Commit zusammengefasst werden
+    sollen.
+  \end{block}
 
-  \TODO{Noch ausformulieren}
+  \onslide<+->
 
   \begin{itemize}
-  \item Projekt: Jeder macht eine Folie auf seinem eigenen Branch
-  \item Dann ins git
+  \item Aktuelle Änderungen ansehen mit \gitcmd{diff} und \gitcmd{status};
+  \item Hinzufügen zum Index: \gitcmd{add presentation.tex};
+  \item Einchecken mit \gitcmd{commit};
+  \item Sinnvolle Commit-Message!
+  \item Mit \gitcmd{log} und \gitcmd{show} prüfen;
   \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-  \frametitle{Änderungen holen}
+  \frametitle{Separate Branches}
 
   \onslide<+->
 
+  \begin{block}{Branches}
+    Abfolge von Änderungen (Commits); \enquote{verschiedene nebenläufige
+      Arbeitsversionen}.
+  \end{block}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item \gitcmd{branch} zum Anzeigen des aktuellen Branches und zum
+    Erstellen neuer Branches;
+  \item \gitcmd{checkout} zum Wechseln von Branches;
+  \end{itemize}
+
 \end{frame}
+
 
 \begin{frame}[fragile]
-  \frametitle{\LaTeX{} Fundamentals}
-
-  \onslide<+->
-
-  \begin{itemize}
-  \item \lstinline{\tiny}, \lstinline{\small}, \lstinline{\large},
-    \lstinline{\Large}, \lstinline{\huge}, \lstinline{\Huge} für Größenangaben
-  \item \lstinline{\texttt}, \lstinline{\textit}, \lstinline{\textsf},
-    \lstinline{\textbf}, \lstinline{\textsc}, \lstinline{\emph}, … für
-    Schriftänderungen
-  \item \lstinline=\textcolor{red}{rot}=, … für Schriftfarbenänderungen
-  \item \lstinline{itemize}, \lstinline{enumerate} für Aufzählungen
-  \item \lstinline{column}, \lstinline{columns} für Spalten auf Folien
-  \item \lstinline{\includegraphics} für Einbindung von Bildern
-  \end{itemize}
-
-  \onslide<+->
-
-  \medskip{}
-
-  $\to$~siehe Beispielpräsentation!
-
-\end{frame}
-
-\begin{frame}
   \frametitle{Remote git-Repositories}
 
   \onslide<+->
 
-  \TODO{\gitcmd{push}, \gitcmd{fetch}, Pull Requests, \gitcmd{remote}}
+  \begin{block}{Remote}
+    Verweis auf ein anderes Repository
+  \end{block}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item \gitcmd{remote} zum Anzeigen und Verwalten von Remotes;
+  \item \gitcmd{fetch} zum Hohlen von Änderungen; anschließend \gitcmd{merge}
+    oder \gitcmd{rebase} (→ git-Einführung)
+  \item \gitcmd{push} zum Hochladen von Änderungen (falls Schreibrechte auf dem
+    Repository vorhanden sind)
+
+    \medskip
+
+    Pushen von Branches:
+\begin{lstlisting}
+$ git push remote mybranch
+\end{lstlisting}
+  \item Alternativ: \emph{Pull Requests} erstellen oder Offline-Workflow
+    (→ git-Einführung)
+  \end{itemize}
 
 \end{frame}
 
 \begin{frame}
   \frametitle{Merging und Konflikte}
 
-  \TODO{Verschiedene Folien mergen; \lstinline{git merge}, \lstinline{git
-      mergetool}}
+  \onslide<+->
+
+  \begin{block}{Merging}
+    Zusammenführen von Änderungen aus mehreren Branches.
+  \end{block}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item \gitcmd{merge branch1} fügt Änderungen aus branch1 in aktuellen Branch
+    ein;
+  \item kann zu Konflikten führen, die manuell aufgelöst werden müssen;
+  \item \gitcmd{mergetool} kann dabei helfen.
+  \end{itemize}
 
 \end{frame}
 
