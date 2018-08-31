@@ -79,6 +79,36 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Repositories}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Sammlung von Commits und weiteren Informationen
+  \item Jedes Repository enthält die \emph{gesamte} Versionshistorie
+    (dezentraler Ansatz)
+  \item Datenstruktur eines Repositories besteht aus Verzeichnisen und Dateien
+    (und kann teilweise direkt editiert werden)
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Struktur eines Repositories}
+
+  \onslide<+->
+
+\begin{verbatim}
+$ ls -F .git
+branches/       HEAD    logs/        refs/
+COMMIT_EDITMSG  hooks/  MERGE_RR     rr-cache/
+config          index   objects/
+description     info/   packed-refs
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}
   \frametitle{Index und Working Tree}
 
   \onslide<+->
@@ -105,18 +135,31 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Struktur eines Repositories}
+  \frametitle{Konfiguration}
 
   \onslide<+->
 
-\begin{verbatim}
-$ ls -F .git
-branches/       HEAD    logs/        refs/
-COMMIT_EDITMSG  hooks/  MERGE_RR     rr-cache/
-config          index   objects/
-description     info/   packed-refs
-\end{verbatim}
+  \begin{block}{Haupt-Konfigurationsdateien}
+    \begin{itemize}
+    \item \verb|/etc/gitconfig| für systemweite Konfiguration
+    \item \verb|~/.config/git/config| und \verb|~/.gitconfig| für benutzerweite
+      Konfiguration
+    \item \verb|.git/config| für lokale Konfiguration im Repository
+    \item \verb|.gitignore| für Dateien, die git ignorieren soll
+    \end{itemize}
 
+  \end{block}
+
+  \medskip{}
+
+  \begin{block}{Konfiguration}
+    \begin{itemize}
+    \item \gitcmd{config} und \gitcmd{ignore}
+    \item direktes Editieren
+    \end{itemize}
+
+    → \verb|man git-config|
+  \end{block}
 \end{frame}
 
 \begin{frame}
@@ -124,7 +167,19 @@ description     info/   packed-refs
 
   \onslide<+->
 
-  \TODO{Konfigurationsdatei erläutern, Beispiele zeigen und sowas}
+  \begin{Beispiele}
+    \begin{itemize}
+    \item \gitcmd{config user.name 'John Doe'}
+    \item \gitcmd{config user.email 'john.doe@no.wars'}
+    \item \gitcmd{ignore dos.exe}
+    \end{itemize}
+  \end{Beispiele}
+
+  \bigskip{}
+
+  \begin{block}{Empfehlung}
+    Keine (größeren) Binärdateien in einem git-Repository speichern!
+  \end{block}
 
 \end{frame}
 
