@@ -213,7 +213,19 @@ description     info/   packed-refs
 
   \onslide<+->
 
-  \TODO{Was Titel sagt}
+  \begin{itemize}
+  \item Gesamtübersicht über den Index: \gitcmd{status}
+  \item Änderungen zum Index hinzufügen:
+    \begin{itemize}
+    \item \gitcmd{add paths}
+    \item \gitcmd{add --patch paths}, \gitcmd{add -p paths}
+    \item \gitcmd{add -u}
+    \end{itemize}
+  \item Änderungen aus dem Index entfernen: \gitcmd{reset paths}
+  \item Änderungen zwischen Index und Working Tree anzeigen: \gitcmd{diff}
+  \item Änderungen zwischen Index und letztem Commit anzeigen: \gitcmd{diff
+      --cached}
+  \end{itemize}
 
 \end{frame}
 
