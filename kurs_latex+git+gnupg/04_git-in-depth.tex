@@ -275,6 +275,40 @@ description     info/   packed-refs
 
 \end{frame}
 
+\begin{frame}
+  \frametitle{Notfallhilfe}
+
+  \onslide<+->
+
+  Manchmal ist das Repository in einem seltsamen Zustand, und nichts klappt mehr
+  … was tun?
+
+  \onslide<+->
+
+  \begin{center}
+    \Large\textcolor{red!80!black}{\textbf{DON'T PANIC!}}
+  \end{center}
+
+  \smallskip{}
+
+  \textbf{Alles, was in einem Commit gespeichert ist, ist sicher!}
+
+  \medskip{}
+
+  \begin{itemize}[<+->]
+  \item Erstmal einen Überblick bekommen: \gitcmd{status}
+  \item Unerwarteter Merge Conflict: \gitcmd{merge --abort}
+  \item \gitcmd{stash} zum Sichern von lokalen Änderungen
+  \item \gitcmd{reset HEAD}, \gitcmd{reset branch}
+  \item \gitcmd{checkout commit path} zum selektiven Zurücksetzen (VORSICHT:
+    löscht lokale Änderungen!)
+  \item Allerletze Maßnahme: \gitcmd{reset --hard branch} (VORSICHT: löscht alle
+    uncommitteten Änderungen!)
+  \end{itemize}
+
+\end{frame}
+
+
 \section{GitHub}
 
 \begin{frame}
