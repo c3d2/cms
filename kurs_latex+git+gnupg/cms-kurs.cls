@@ -48,8 +48,6 @@
 
 \DeclareRobustCommand{\includedeck}[1]{\include{content/#1}}
 
-\AfterBeginDocument{\maketitle}
-
 %% Listings
 
 \RequirePackage{listings}
