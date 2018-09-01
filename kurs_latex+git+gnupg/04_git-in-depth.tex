@@ -228,21 +228,44 @@ description     info/   packed-refs
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
   \frametitle{Commits}
 
   \onslide<+->
 
-  \TODO{Was Titel sagt}
+  \begin{itemize}
+  \item Aus dem aktuellen Inhalt des Index einen Commit erzeugen:
+    \gitcmd{commit}
+  \item Commit anzeigen: \gitcmd{show}
+  \end{itemize}
+
+  \onslide<+->
+
+  \begin{block}{Benennung von Commits (oder \emph{Revisions})}
+    \begin{itemize}
+    \item Direkt mit SHA-1:
+      \texttt{3491d63610dd8d973caf2d75ecbb9cb3eb00bf6b},\newline kurz:
+      \texttt{3491d6}
+    \item Branch-Namen, Tags
+    \item Zeitliche Referenz: \verb=HEAD@{5 minutes ago}=
+    \item Vorgänger: \verb=master~5=
+    \item … → \verb=man gitrevisions=
+    \end{itemize}
+  \end{block}
 
 \end{frame}
 
 \begin{frame}
-  \frametitle{Logs}
+  \frametitle{Branches und Tags}
 
   \onslide<+->
 
-  \TODO{Was Titel sagt}
+  \begin{itemize}
+  \item Branches anzeigen, erzeugen, …: \gitcmd{branch}
+  \item Branche wechseln: \gitcmd{checkout}
+  \item Commits eines Branches anzeigen: \gitcmd{log}
+  \item Tags anzeigen, erzeugen, …: \gitcmd{tag}
+  \end{itemize}
 
 \end{frame}
 
@@ -251,8 +274,13 @@ description     info/   packed-refs
 
   \onslide<+->
 
-  \TODO{\gitcmd{pull}, \gitcmd{fetch}, \gitcmd{pull}, \gitcmd{merge},
-    \gitcmd{rebase}}
+  \begin{itemize}
+  \item Commits/Branches aus einem anderen Repository holen: \gitcmd{fetch
+      \$REMOTE \$BRANCH};
+  \item Anderen Branch in aktuellen mergen: \gitcmd{merge \$BRANCH}
+  \item Fetch mit anschließendem Merge: \gitcmd{pull}
+  \item Alternative zum Merge: \emph{Rebasing} mit \gitcmd{rebase}
+  \end{itemize}
 
 \end{frame}
 
@@ -261,16 +289,10 @@ description     info/   packed-refs
 
   \onslide<+->
 
-  \TODO{\gitcmd{format-patch}, \gitcmd{am}}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Merging}
-
-  \onslide<+->
-
-  \TODO{Was Titel sagt}
+  \begin{itemize}
+  \item Änderungen als Patches ablegen: \gitcmd{format-patch \$SINCE}
+  \item Patches einspielen: \gitcmd{am *.patch}
+  \end{itemize}
 
 \end{frame}
 
