@@ -216,11 +216,11 @@ description     info/   packed-refs
   \item Gesamtübersicht über den Index: \gitcmd{status}
   \item Änderungen zum Index hinzufügen:
     \begin{itemize}
-    \item \gitcmd{add paths}
-    \item \gitcmd{add --patch paths}, \gitcmd{add -p paths}
+    \item \gitcmd{add \$PATHS}
+    \item \gitcmd{add --patch \$PATHS}, \gitcmd{add -p \$PATHS}
     \item \gitcmd{add -u}
     \end{itemize}
-  \item Änderungen aus dem Index entfernen: \gitcmd{reset paths}
+  \item Änderungen aus dem Index entfernen: \gitcmd{reset \$PATHS}
   \item Änderungen zwischen Index und Working Tree anzeigen: \gitcmd{diff}
   \item Änderungen zwischen Index und letztem Commit anzeigen: \gitcmd{diff
       --cached}
@@ -298,11 +298,12 @@ description     info/   packed-refs
   \item Erstmal einen Überblick bekommen: \gitcmd{status}
   \item Unerwarteter Merge Conflict: \gitcmd{merge --abort}
   \item \gitcmd{stash} zum Sichern von lokalen Änderungen
-  \item \gitcmd{reset HEAD}, \gitcmd{reset branch}
+  \item \gitcmd{fsck}, um das Repository zu prüfen
+  \item \gitcmd{reset HEAD}, \gitcmd{reset \$BRANCH}
   \item \gitcmd{checkout commit path} zum selektiven Zurücksetzen (VORSICHT:
     löscht lokale Änderungen!)
-  \item Allerletze Maßnahme: \gitcmd{reset --hard branch} (VORSICHT: löscht alle
-    uncommitteten Änderungen!)
+  \item Allerletze Maßnahme: \gitcmd{reset --hard \$BRANCH} (VORSICHT: löscht
+    alle uncommitteten Änderungen!)
   \end{itemize}
 
 \end{frame}
