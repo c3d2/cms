@@ -1,10 +1,5 @@
 \documentclass{cms-kurs}
 
-\usepackage{tikz}
-\tikzset{
-  commit/.style={draw=green!80!black,fill=green!80!white,circle,very thick},
-  pred/.style={<-,very thick,>=stealth}
-}
 \begin{document}
 
 \title{In-Depth: git}
@@ -198,7 +193,16 @@ description     info/   packed-refs
 
   \onslide<+->
 
-  \gitcmd{clone}, \gitcmd{init}, \gitcmd{config}, \gitcmd{remote}
+  \begin{itemize}
+  \item Ein neues Repository anlegen:
+    \begin{itemize}
+    \item \gitcmd{init}
+    \item \gitcmd{init --bare}
+    \end{itemize}
+  \item Ein bestehendes Repository kopieren (\emph{klonen}): \gitcmd{clone}
+  \item Verbindungen zu anderen Repositories (\emph{Remotes}) verwalten:
+    \gitcmd{remote}
+  \end{itemize}
 
 \end{frame}
 

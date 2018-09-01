@@ -92,3 +92,11 @@
     \end{block}
   \end{frame}
 }}
+
+%% TikZ
+
+\usepackage{tikz}
+\tikzset{
+  commit/.style={draw=green!80!black,fill=green!80!white,circle,very thick},
+  pred/.style={<-,very thick,>=stealth}
+}
