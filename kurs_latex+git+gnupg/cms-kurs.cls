@@ -72,3 +72,25 @@
 
 \RequirePackage{todonotes}
 \DeclareRobustCommand{\TODO}[1]{\todo[inline]{TODO: #1}}
+
+%% Section and Subsection Headings
+
+\AtBeginSection{{
+  \begin{frame}
+    \begin{block}{}
+      \usebeamercolor[fg]{titlelike}%
+      \LARGE\strut\smash{\insertsection}\newline
+      \Large\null\hfill\strut\smash{~}
+    \end{block}
+  \end{frame}
+}}
+
+\AtBeginSubsection{{
+  \begin{frame}
+    \begin{block}{}
+      \usebeamercolor[fg]{titlelike}%
+      \LARGE\strut\smash{\insertsection}\newline
+      \Large\null\hfill\strut\smash{\insertsubsection}
+    \end{block}
+  \end{frame}
+}}
