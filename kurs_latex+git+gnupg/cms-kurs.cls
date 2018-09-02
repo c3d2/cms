@@ -56,12 +56,17 @@
   texcl=true,
   commentstyle=\rm,
   basicstyle=\tt,
+  keywordstyle={\color{blue}\bfseries},
+  frame=tb,
+  extendedchars=true,
+  mathescape=true,
   numbers=none,
   stepnumber=1,
   firstnumber=0,
   numberstyle={\tiny},
   commentstyle={\itshape},
   columns=fullflexible,
+  literate={ä}{{\"a}}1 {ö}{{\"o}}1
 }
 
 \DeclareRobustCommand{\gitcmd}[1]{\lstinline{git #1}}
