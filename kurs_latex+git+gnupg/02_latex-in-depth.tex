@@ -10,6 +10,8 @@
   {\begin{frame}[fragile,environment=slide]}
   {\end{frame}}
 
+\setbeameroption{show notes on second screen=right}
+
 \begin{document}
 
 \title{In-Depth: Präsentationen mit \LaTeX{}}
@@ -689,6 +691,29 @@ Noch mehr Text Text Text\dots
   \onslide<+->
 
   → Live im Repo ansehen!
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Notizen}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Notizen zu Slides können mit \lstinline|\note{...}| hinzugefügt werden
+  \item Overlay-Spezifikationen können auch angegeben werden
+  \item Anzeigen mit folgender Einstellung in der Präambel
+\begin{lstlisting}
+\setbeameroption%
+  {show notes on second screen = right}
+\end{lstlisting}
+  \item Präsentation halten zum Beispiel mit
+\begin{verbatim}
+$ pdfpc 02_latex-in-depth.pdf --notes=right
+\end{verbatim}
+  \end{itemize}
+
+  \note{Hier noch Notizen erwähnen}
 
 \end{frame}
 
