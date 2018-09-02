@@ -49,7 +49,7 @@
 
   \onslide<+->
 
-  Fast alle der folgenden Folien sind aus dem Kurs \emph{Wissenschaftliches
+  Fast alle der folgenden Folien stammen aus dem Kurs \emph{Wissenschaftliches
     Arbeiten mit \LaTeX} von Tom~Hanika und Daniel~Borchmann, HTW 2016,
   cc-by-sa.
 
@@ -145,7 +145,7 @@
   \begin{itemize}
   \item Dokument ist unterteilt in \emph{Präambel} und \emph{Dokumentenkörper}
     \begin{itemize}
-    \item Das Dokument beginnt mit der Präamble bis zum Befehl
+    \item Das Dokument beginnt mit der Präambel bis zum Befehl
       \lstinline|\begin{document}|; enthält die \enquote{Gesamtformatierung} des
         Dokuments
       \item Der Dokumentenkörper zwischen \lstinline|\begin{document}| und
@@ -165,13 +165,12 @@
   \onslide<+->
 
   \begin{itemize}
-  \item Die \emph{Dokumentenklasse} zu spezifizieren; bei uns immer
+  \item Spezifikation der \emph{Dokumentenklasse}; bei uns immer
 \begin{lstlisting}
 \documentclass{beamer}
 \end{lstlisting}
 
-  \item<+-> Pakete einzubinden
-    Pakete werden eingebunden mittels
+  \item<+-> Pakete einbinden mit
 \begin{lstlisting}
 \usepackage[$\textit{option}$]{$\textit{paketname}$}
 \end{lstlisting}
@@ -193,7 +192,7 @@
 
   \onslide<+->
 
-  Abschnitte werden wie \LaTeX\ üblich mit \lstinline{\section}, \dots\ angelegt
+  Abschnitte werden wie in \LaTeX{} mit \lstinline{\section}, \dots\ angelegt
 
 \begin{lstlisting}
 \section{Overlays}
@@ -214,10 +213,11 @@
 
   \onslide<1->
 
-  Einfach wie üblich mit
+  Einfach mit
 \begin{lstlisting}
 \tableofcontents
 \end{lstlisting}
+  und zweimaligem Übersetzen des Dokuments.
 
   \onslide<2->{\tableofcontents}
 
@@ -339,7 +339,7 @@
 
   \onslide<+->
 
-  Manuelle Größeneinstellung auch möglich (\lstinline!graphicx!)
+  Manuelle Größeneinstellung auch möglich (→~\lstinline!graphicx!)
 
 \end{frame}
 
@@ -407,8 +407,8 @@
 
   \onslide<+->
 
-  Einzelne Folien werden mit \lstinline!\begin{frame}! \dots \lstinline!\end{frame}!
-  erzeugt:
+  Einzelne Folien werden mit \lstinline!\begin{frame}! \dots
+    \lstinline!\end{frame}!  erzeugt:
 \begin{lstlisting}
 \begin{frame}
   \frametitle{Frames}
