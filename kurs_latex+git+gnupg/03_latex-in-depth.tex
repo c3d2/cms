@@ -45,9 +45,11 @@
 
   \bigskip{}
 
+  \onslide<+->
+
   Fast alle der folgenden Folien sind aus dem Kurs \emph{Wissenschaftliches
     Arbeiten mit \LaTeX} von Tom~Hanika und Daniel~Borchmann, HTW 2016,
-  CC-BY-SA.
+  cc-by-sa.
 
 \end{frame}
 
@@ -76,12 +78,9 @@
 
   \onslide<+->
 
-  \begin{itemize}
-  \item \LaTeX{} ist eine \emph{Markupsprache}
-  \item das \LaTeX{}-Dokument wird in einer \emph{Quelldatei} abgelegt
-  \item das eigentliche Dokument wird durch einen \emph{\LaTeX-Compiler}
-    erzeugt
-  \end{itemize}
+  \LaTeX{} ist eine \emph{Markupsprache}, d.h.~aus einem \emph{\LaTeX-Dokument}
+  wird durch einen \emph{\LaTeX-Compiler} (\texttt{pdflatex}) das eigentliche
+  Dokument erzeugt.
 
   \onslide<+->
 
@@ -121,8 +120,8 @@
         Vedran Miletić
       \item Weit verbreitet in der akademischen Welt (aber kaum darüber hinaus
         \dots)
-      \item Präsentationen ähnlich zu anderen Systemen (meist aber etwas
-        \enquote{statischer})
+      \item Aussehen der Präsentationen ähnlich zu anderen Systemen, meist aber
+        etwas \enquote{statischer}
       \end{itemize}
     \end{column}
     \begin{column}{0.3\linewidth}
@@ -164,7 +163,12 @@
 
   \onslide<+->
 
-  Je nach Theme wird dies dann in den Kopf- oder Fußzeilen der Folien angezeigt.
+  \begin{itemize}
+  \item Je nach Theme wird dies dann in den Kopf- oder Fußzeilen der Folien
+    angezeigt.
+  \item Werden automatisch im Inhaltsverzeichnis eingefügt.
+  \end{itemize}
+
 \end{slide}
 
 \begin{slide}
@@ -358,7 +362,7 @@
 
 \section{\LaTeX{} \texttt{beamer}}
 
-\subsection{Folien}
+\subsection{Folien erstellen}
 
 \begin{slide}
   \frametitle{Frames}
@@ -391,12 +395,6 @@
 
 \begin{slide}
   \frametitle{Handouts}
-
-  \onslide<+->
-
-  \begin{block}{\enquote{\textcolor{red}{Problem}}}
-    Handouts erstellen.
-  \end{block}
 
   \onslide<+->
 
@@ -460,13 +458,19 @@
 
   \onslide<+->
 
+  \medskip{}
+
   \begin{block}{Titel}
     Text Text Text
   \end{block}
 
+  \medskip{}
+
   \onslide<+->
 
   Je nach Theme können die Blöcke auch Schatten haben:
+
+  \medskip{}
 
   \setbeamertemplate{blocks}[rounded][shadow=true]
   \begin{block}{Titel}
