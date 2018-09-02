@@ -133,7 +133,7 @@
 
 \end{frame}
 
-\subsection{Grundlegendes Markup}
+\subsection{Struktur eines \LaTeX{}-Dokuments}
 
 \begin{frame}[fragile]
   \frametitle{Allgemein Struktur eines \LaTeX{}-Dokuments}
@@ -141,14 +141,50 @@
   \onslide<+->
 
   \begin{itemize}
-  \item Text im \emph{Dokumentenkörper} zwischen \lstinline|\begin{document}|
-      und \lstinline|\end{document}|
-  \item Textformatierung dazwischen \enquote{fast} beliebig, Text wird
-    automatisch gesetzt (es gibt hier Ausnahmen …)
-  \item Sonderfall: \emph{Kommandos} und \emph{Umgebungen}
+  \item Dokument ist unterteilt in \emph{Präambel} und \emph{Dokumentenkörper}
+    \begin{itemize}
+    \item Das Dokument beginnt mit der Präamble bis zum Befehl
+      \lstinline|\begin{document}|; enthält die \enquote{Gesamtformatierung} des
+        Dokuments
+      \item Der Dokumentenkörper zwischen \lstinline|\begin{document}| und
+          \lstinline|\end{document}| enthält den eigentlichen Inhalt des
+        Dokuments
+    \end{itemize}
+  \item<+-> Textformatierung des Inhalts \enquote{fast} beliebig, Text wird
+    automatisch gesetzt (aber es gibt hier Ausnahmen …)
+  \item<.-> Sonderfall: \emph{Kommandos} und \emph{Umgebungen}
   \end{itemize}
 
 \end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Die Präambel}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Die \emph{Dokumentenklasse} zu spezifizieren; bei uns immer
+\begin{lstlisting}
+\documentclass{beamer}
+\end{lstlisting}
+
+  \item<+-> Pakete einzubinden
+    Pakete werden eingebunden mittels
+\begin{lstlisting}
+\usepackage[$\textit{option}$]{$\textit{paketname}$}
+\end{lstlisting}
+    Zum Beispiel
+\begin{lstlisting}
+\usepackage{graphicx}  % Einbindung von Bildern
+\end{lstlisting}
+
+  \item<+-> Standardwerte des Dokuments anzupassen
+  \item<.-> separate Befehle (\emph{Makros}) zu definieren oder zu ändern
+  \end{itemize}
+
+\end{frame}
+
+\subsection{Grundlegendes Markup}
 
 \begin{slide}
   \frametitle{Abschnitte}
