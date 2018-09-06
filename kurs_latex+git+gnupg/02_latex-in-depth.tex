@@ -380,8 +380,7 @@
   \item Einbinden von Graphiken in \LaTeX\ mit Hilfe des Pakets \texttt{graphicx}
   \item Befehl
 \begin{lstlisting}
-\includegraphics[\textit{Optionen}]%
-  {\textit{Bildname}}
+\includegraphics[$\textit{Optionen}$]{$\textit{Bildname}$}
 \end{lstlisting}
   \end{itemize}
 
@@ -430,31 +429,6 @@
     Listings enthält
   \item \lstinline{plain}, falls die Folie keine Kopf- und Fußzeile haben soll
   \end{itemize}
-
-\end{slide}
-
-\begin{slide}
-  \frametitle{Handouts}
-
-  \onslide<+->
-
-  Mit
-\begin{lstlisting}
-\documentclass[handout]{beamer}
-\mode<handout>{%
-  \usepackage{pgfpages}
-  \pgfpagesuselayout{2 on 1}%
-    [a4paper,border shrink=5mm]
-}
-\end{lstlisting}
-
-  \onslide<+->
-
-  Es sind dann eventuell kleine Anpassungen im Dokument nötig, meist bei den
-  Overlays:
-\begin{lstlisting}
-\onslide<+| handout:0>
-\end{lstlisting}
 
 \end{slide}
 
@@ -661,6 +635,31 @@ Noch mehr Text Text Text\dots
 \end{slide}
 
 \subsection{Diverses}
+
+\begin{slide}
+  \frametitle{Handouts}
+
+  \onslide<+->
+
+  Mit
+\begin{lstlisting}
+\documentclass[handout]{beamer}
+\mode<handout>{%
+  \usepackage{pgfpages}
+  \pgfpagesuselayout{2 on 1}%
+    [a4paper,border shrink=5mm]
+}
+\end{lstlisting}
+
+  \onslide<+->
+
+  Es sind dann eventuell kleine Anpassungen im Dokument nötig, meist bei den
+  Overlays:
+\begin{lstlisting}
+\onslide<+| handout:0>
+\end{lstlisting}
+
+\end{slide}
 
 \begin{frame}[fragile]
   \frametitle{Farben und Aussehen einstellen}

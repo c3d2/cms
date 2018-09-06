@@ -74,9 +74,9 @@
 
   \begin{itemize}
   \item Sammlung von Commits und weiteren Informationen
-  \item Jedes Repository enthält die \emph{gesamte} Versionshistorie
+  \item Jedes Repository enthält die \emph{gesamte} Versionsgeschichte
     (dezentraler Ansatz)
-  \item Datenstruktur eines Repositories besteht aus Verzeichnisen und Dateien
+  \item Datenstruktur eines Repositories besteht aus Verzeichnissen und Dateien
     (und kann teilweise direkt editiert werden)
   \end{itemize}
 
@@ -143,7 +143,7 @@ description     info/   packed-refs
 
   \begin{block}{Konfiguration}
     \begin{itemize}
-    \item \gitcmd{config} und \gitcmd{ignore}
+    \item \gitcmd{config}
     \item direktes Editieren
     \end{itemize}
 
@@ -160,7 +160,7 @@ description     info/   packed-refs
     \begin{itemize}
     \item \gitcmd{config user.name 'John Doe'}
     \item \gitcmd{config user.email 'john.doe@no.wars'}
-    \item \gitcmd{ignore dos.exe}
+    \item \gitcmd{config color.ui true}
     \end{itemize}
   \end{Beispiele}
 
@@ -263,7 +263,7 @@ description     info/   packed-refs
 
   \begin{itemize}
   \item Branches anzeigen, erzeugen, …: \gitcmd{branch}
-  \item Branche wechseln: \gitcmd{checkout}
+  \item Branch wechseln: \gitcmd{checkout}
   \item Commits eines Branches anzeigen: \gitcmd{log}
   \item Tags anzeigen, erzeugen, …: \gitcmd{tag}
   \end{itemize}
@@ -281,6 +281,7 @@ description     info/   packed-refs
   \item Anderen Branch in aktuellen mergen: \gitcmd{merge BRANCH}
   \item Fetch mit anschließendem Merge: \gitcmd{pull}
   \item Alternative zum Merge: \emph{Rebasing} mit \gitcmd{rebase}
+  \item Änderungen in ein anderes Repository kopieren: \gitcmd{push}
   \end{itemize}
 
 \end{frame}
