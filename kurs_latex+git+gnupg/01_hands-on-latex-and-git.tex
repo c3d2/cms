@@ -1,0 +1,323 @@
+\documentclass{cms-kurs}
+
+\begin{document}
+
+\title{Hands-On: \LaTeX{} und git}
+\author{dbo}
+\date{2018-09-07}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Ziele}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Erste Erfahrungen mit \LaTeX{} sammeln;
+  \item Erste Präsentation mit \LaTeX{} erstellen;
+  \item \LaTeX{}-Präsentationen mit git verwalten.
+  \item Zusammen an einer Präsentation arbeiten.
+  \end{itemize}
+
+\end{frame}
+
+\section{\LaTeX{} First Contact}
+
+\subsection{Eine Einführung am Beispiel}
+
+\begin{frame}
+  \frametitle{Was ist \LaTeX?}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Markup-Sprache für den Satz vorrangig akademischer Texte;
+  \item Makro-Sammlung auf Basis von \TeX{};
+  \item Eingabeformat Text, Ausgabeformat meist PDF oder PostScript;
+  \item Fokus auf korrekter Typographie;
+  \item Sehr vielseitig und damit hohes Verwirrungspotential.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Eine kleine \LaTeX-Präsentation}
+
+  \onslide<+->
+
+  → Beispiel: \LaTeX{}-Präsentation
+
+\end{frame}
+
+\subsection{Das \LaTeX{} Ökosystem}
+
+\begin{frame}[fragile]
+  \frametitle{Installation}
+
+  \onslide<+->
+
+  \begin{block}{Verwirrungspotential}
+    \LaTeX{} besteht aus vielen Komponenten (Distributionen, Engines, Editor,
+    Viewer, \ldots)
+  \end{block}
+
+  \onslide<+->
+
+  \bigskip{}
+
+  \begin{block}{Distributionen}
+    \begin{itemize}
+    \item \TeX{}Live (→ \url{https://www.tug.org/texlive/}) für
+      Linux-basierte Systeme und OSX (→ Mac\TeX)
+\begin{verbatim}
+$ apt install texlive-full
+\end{verbatim}
+    \item Mik\TeX{} (→ \url{https://miktex.org}) für Windows.
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Texteditoren}
+
+  \onslide<+->
+
+  \begin{block}{Wichtig!}
+    \LaTeX-Dateien sind reine \emph{Textdateien}!
+  \end{block}
+
+  \onslide<+->
+
+  Wir brauchen also einen Texteditor (am besten einen, der auch \LaTeX{}
+  versteht) \dots{} \onslide<+-> da gibt es viele!
+  \begin{itemize}
+  \item TeXstudio (Cross plattform)
+  \item TeXmaker  (Cross plattform)
+  \item Kile      (nur unter KDE)
+  \item vim mit LaTeX-suite
+  \item TeXnicCenter (nur unter Windows)
+  \item GNU Emacs mit der Erweiterung AUCTeX.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Übersetzung}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item<+-> Editor: entsprechende Knöpfe drücken (ist bei allen anders …);
+  \item<+-> Kommandozeile: \lstinline{pdflatex} (eventuell mehrfach), PDF dann
+    im Viewer ansehen.
+  \end{itemize}
+
+\end{frame}
+
+\subsection{Basic Markup}
+
+\begin{frame}[fragile]
+  \frametitle{\LaTeX{} Fundamentals}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item \lstinline{\tiny}, \lstinline{\small}, \lstinline{\large},
+    \lstinline{\Large}, \lstinline{\huge}, \lstinline{\Huge} für Größenangaben
+  \item \lstinline{\texttt}, \lstinline{\textit}, \lstinline{\textsf},
+    \lstinline{\textbf}, \lstinline{\textsc}, \lstinline{\emph}, … für
+    Schriftänderungen
+  \item \lstinline=\textcolor{red}{rot}=, … für Schriftfarbenänderungen
+  \item \lstinline{itemize}, \lstinline{enumerate} für Aufzählungen
+  \item \lstinline{column}, \lstinline{columns} für Spalten auf Folien
+  \item \lstinline{\includegraphics} für Einbindung von Bildern
+  \end{itemize}
+
+  \onslide<+->
+
+  \medskip{}
+
+  → siehe Beispielpräsentation und \LaTeX-Einführung!
+
+\end{frame}
+
+\section{Versionskontrolle mit git}
+
+\subsection{Hands-On: \LaTeX{} verwalten}
+
+\begin{frame}
+  \frametitle{Versionsverwaltung mit git}
+
+  \onslide<+->
+
+  \begin{block}{Vorteile von \LaTeX{}}
+    Da \LaTeX{}-Dateien reiner Text sind, lassen sie sich mit Versionskontrollen
+    kombinieren!
+  \end{block}
+
+  \onslide<+->
+
+  \begin{block}{Versionskontrolle mit git}
+    \begin{itemize}
+    \item Versionskontrolle für viele prominente Projekte (Linux-Kernel, Perl,
+      Python, Ruby, Rust, git, \ldots);
+    \item Für Programmierer gemacht, aber auch darüber hinaus vielseitig
+      einsetzbar;
+    \item Basiskonzepte: \emph{Repository}, \emph{Commit}, \emph{Branch}, \ldots
+    \item Hauptplatform *nix, unter Windows auch \enquote{benutzbar}
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Projekt: Eine gemeinsame Präsentation}
+
+  \begin{itemize}
+  \item Jeder macht lokal einige Folien;
+  \item Einchecken und hochladen in gemeinsames git-Repository;
+  \item Dann zu einer Präsentation zusammenführen.
+  \end{itemize}
+
+\end{frame}
+
+\subsection{Grundbegriffe}
+
+\begin{frame}
+  \frametitle{Erstellung von Repositories}
+
+  \onslide<+->
+
+  \begin{block}{Repository}
+    Zusammenfassung aller relevanten Dateien und deren Änderungen.
+  \end{block}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item \gitcmd{init} zum Anlegen eines neuen Repositories;
+  \item \gitcmd{log} zum Anzeigen des aktuellen
+  \item \gitcmd{branch} zur Anzeige des aktuellen Branches
+  \item \gitcmd{clone} zum Klonen bereits vorhandener Repositories
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Lokale git-Repositories}
+
+  \onslide<+->
+
+  \begin{block}{Commit}
+    Zusammenfassung bestimmter relevanter Änderungen;
+    \enquote{Versionszwischenstände}.
+  \end{block}
+
+  \begin{block}{Index}
+    Zwischenspeicher für Änderungen, die zu einem Commit zusammengefasst werden
+    sollen.
+  \end{block}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Aktuelle Änderungen ansehen mit \gitcmd{diff} und \gitcmd{status};
+  \item Hinzufügen zum Index: \gitcmd{add presentation.tex};
+  \item Einchecken mit \gitcmd{commit};
+  \item Sinnvolle Commit-Message!
+  \item Mit \gitcmd{log} und \gitcmd{show} prüfen;
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Separate Branches}
+
+  \onslide<+->
+
+  \begin{block}{Branches}
+    Abfolge von Änderungen (Commits); \enquote{verschiedene nebenläufige
+      Arbeitsversionen}.
+  \end{block}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item \gitcmd{branch} zum Anzeigen des aktuellen Branches und zum
+    Erstellen neuer Branches;
+  \item \gitcmd{checkout} zum Wechseln von Branches;
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Remote git-Repositories}
+
+  \onslide<+->
+
+  \begin{block}{Remote}
+    Verweis auf ein anderes Repository
+  \end{block}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item \gitcmd{remote} zum Anzeigen und Verwalten von Remotes;
+  \item \gitcmd{fetch} zum Holen von Änderungen; anschließend \gitcmd{merge}
+    oder \gitcmd{rebase} (→ git-Einführung)
+  \item \gitcmd{push} zum Hochladen von Änderungen (falls Schreibrechte auf dem
+    Repository vorhanden sind)
+
+    \medskip
+
+    Pushen von Branches:
+\begin{verbatim}
+$ git push remote mybranch
+\end{verbatim}
+  \item Alternativ: \emph{Pull Requests} erstellen oder Offline-Workflow
+    (→ git-Einführung)
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Merging und Konflikte}
+
+  \onslide<+->
+
+  \begin{block}{Merging}
+    Zusammenführen von Änderungen aus mehreren Branches.
+  \end{block}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item \gitcmd{merge branch1} fügt Änderungen aus branch1 in aktuellen Branch
+    ein;
+  \item kann zu Konflikten führen, die manuell aufgelöst werden müssen;
+  \item \gitcmd{mergetool} kann dabei helfen.
+  \end{itemize}
+
+\end{frame}
+
+\subsection{Jetzt wird's praktisch!}
+
+\begin{frame}
+  \frametitle{Auf geht's!}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Repository clonen {\color{green}\Large\checkmark}
+  \item Neuen Branch machen {\color{green}\Large\checkmark}
+  \item Änderungen drauf machen
+  \item Branch pushen
+  \item Fetch und dann nach master mergen
+  \end{itemize}
+\end{frame}
+
+
+\end{document}

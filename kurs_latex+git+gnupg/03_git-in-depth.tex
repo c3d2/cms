@@ -1,0 +1,372 @@
+\documentclass{cms-kurs}
+
+\begin{document}
+
+\title{In-Depth: git}
+\author{dbo}
+\date{2018-09-08}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Übersicht}
+  \tableofcontents{}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ziele}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item git verstehen und sicher benutzen
+  \item Fokus auf Versionkontrolle von \LaTeX{}
+  \item Arbeit mit der Kommandozeile
+  \item Arbeit mit github (gitlab, …)
+  \end{itemize}
+
+\end{frame}
+
+\section{Grundlegende Arbeitsweise}
+
+\begin{frame}[fragile]
+  \frametitle{Commits}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item git sammelt zusammengehörige Änderungen in einem \emph{Commit}
+  \item Commits verweisen auf Vorgängern (meistens einer, manchmal zwei oder
+    mehr; selten keiner)
+  \item Commits werden durch ihren SHA-1 Wert eindeutig identifiziert
+  \item Commits mit \enquote{Namen} heißen \emph{Branches}
+  \end{itemize}
+
+  \begin{center}
+    \begin{tikzpicture}
+      \path
+      node[commit] (root) {}
+      node[commit,right=of root] (1) {}
+      node[commit,right=of 1] (2) {}
+      node[commit,above right=of 2] (3) {}
+      node[commit,right=of 3] (4) {}
+      node[commit,below right=of 2] (5) {}
+      node[commit,label={right:master},below right=of 4] (6) {}
+      node[commit,label={right:dev}] (7) at (5 -| 6) {}
+      (root) edge[pred] (1)
+      (1) edge[pred] (2)
+      (2) edge[pred] (3)
+      (3) edge[pred] (4)
+      (2) edge[pred] (5)
+      (4) edge[pred] (6)
+      (5) edge[pred] (6)
+      (5) edge[pred] (7)
+      ;
+    \end{tikzpicture}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Repositories}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Sammlung von Commits und weiteren Informationen
+  \item Jedes Repository enthält die \emph{gesamte} Versionsgeschichte
+    (dezentraler Ansatz)
+  \item Datenstruktur eines Repositories besteht aus Verzeichnissen und Dateien
+    (und kann teilweise direkt editiert werden)
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Struktur eines Repositories}
+
+  \onslide<+->
+
+\begin{verbatim}
+$ ls -F .git
+branches/       HEAD    logs/        refs/
+COMMIT_EDITMSG  hooks/  MERGE_RR     rr-cache/
+config          index   objects/
+description     info/   packed-refs
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Index und Working Tree}
+
+  \onslide<+->
+
+  \begin{block}{Working Tree}
+    \begin{itemize}
+    \item Dateien, an denen aktuell Änderungen vorgenommen werden können
+    \item \emph{HEAD} zeigt auf den aktuell ausgecheckten Commit; Dateien des
+      Working Tree basieren auf diesem Commit
+    \item Ein Repository kann mehr als einen Working Tree haben
+      (→ \gitcmd{worktree})
+    \end{itemize}
+  \end{block}
+
+  \medskip{}
+
+  \begin{block}{Index}
+    \begin{itemize}
+    \item Ansammlung von Änderungen für den nächsten Commit
+    \item Änderungen in einer Datei können unabhängig voneinander in den Index
+      aufgenommen werden
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Konfiguration}
+
+  \onslide<+->
+
+  \begin{block}{Haupt-Konfigurationsdateien}
+    \begin{itemize}
+    \item \verb|/etc/gitconfig| für systemweite Konfiguration
+    \item \verb|~/.config/git/config| und \verb|~/.gitconfig| für benutzerweite
+      Konfiguration
+    \item \verb|.git/config| für lokale Konfiguration im Repository
+    \item \verb|.gitignore| für Dateien, die git ignorieren soll
+    \end{itemize}
+
+  \end{block}
+
+  \medskip{}
+
+  \begin{block}{Konfiguration}
+    \begin{itemize}
+    \item \gitcmd{config}
+    \item direktes Editieren
+    \end{itemize}
+
+    → \verb|man git-config|
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Konfiguration}
+
+  \onslide<+->
+
+  \begin{Beispiele}
+    \begin{itemize}
+    \item \gitcmd{config user.name 'John Doe'}
+    \item \gitcmd{config user.email 'john.doe@no.wars'}
+    \item \gitcmd{config color.ui true}
+    \end{itemize}
+  \end{Beispiele}
+
+  \bigskip{}
+
+  \begin{block}{Empfehlung}
+    Keine (größeren) Binärdateien in einem git-Repository speichern!
+  \end{block}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Dokumentation}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Direkter Aufruf, z.B.{} \gitcmd{add --help}
+  \item Manpages: \lstinline{man gittutorial}
+  \item Website: \url{https://git-scm.com}
+  \item Pro-Git: \url{https://git-scm.com/book/en/v2}
+  \item \url{https://rogerdudler.github.io/git-guide/index.de.html}
+  \end{itemize}
+
+\end{frame}
+
+\section{Standard Porcelain Commands}
+
+\begin{frame}
+  \frametitle{Repositories verwalten}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Ein neues Repository anlegen:
+    \begin{itemize}
+    \item \gitcmd{init}
+    \item \gitcmd{init --bare}
+    \end{itemize}
+  \item Ein bestehendes Repository kopieren (\emph{klonen}): \gitcmd{clone}
+  \item Verbindungen zu anderen Repositories (\emph{Remotes}) verwalten:
+    \gitcmd{remote}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Verwaltung des Index}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Gesamtübersicht über den Index: \gitcmd{status}
+  \item Änderungen zum Index hinzufügen:
+    \begin{itemize}
+    \item \gitcmd{add PATHS}
+    \item \gitcmd{add --patch PATHS}, \gitcmd{add -p PATHS}
+    \item \gitcmd{add -u}
+    \end{itemize}
+  \item Änderungen aus dem Index entfernen: \gitcmd{reset PATHS}
+  \item Änderungen zwischen Index und Working Tree anzeigen: \gitcmd{diff}
+  \item Änderungen zwischen Index und letztem Commit anzeigen: \gitcmd{diff
+      --cached}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Commits}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Aus dem aktuellen Inhalt des Index einen Commit erzeugen:
+    \gitcmd{commit}
+  \item Commit anzeigen: \gitcmd{show}
+  \item Graphische Anzeige: \verb|gitk|
+  \end{itemize}
+
+  \onslide<+->
+
+  \begin{block}{Benennung von Commits (oder \emph{Revisions})}
+    \begin{itemize}
+    \item Direkt mit SHA-1:
+      \texttt{3491d63610dd8d973caf2d75ecbb9cb3eb00bf6b},\newline kurz:
+      \texttt{3491d6}
+    \item Branch-Namen, Tags
+    \item Zeitliche Referenz: \verb=HEAD@{5 minutes ago}=
+    \item Vorgänger: \verb=master~5=
+    \item … → \verb=man gitrevisions=
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Branches und Tags}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Branches anzeigen, erzeugen, …: \gitcmd{branch}
+  \item Branch wechseln: \gitcmd{checkout}
+  \item Commits eines Branches anzeigen: \gitcmd{log}
+  \item Tags anzeigen, erzeugen, …: \gitcmd{tag}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Online-Synchronisation (\emph{Merge Workflow})}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Commits/Branches aus einem anderen Repository holen: \gitcmd{fetch
+      REMOTE BRANCH};
+  \item Anderen Branch in aktuellen mergen: \gitcmd{merge BRANCH}
+  \item Fetch mit anschließendem Merge: \gitcmd{pull}
+  \item Alternative zum Merge: \emph{Rebasing} mit \gitcmd{rebase}
+  \item Änderungen in ein anderes Repository kopieren: \gitcmd{push}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Offline-Synchronisation (\emph{Patch Workflow})}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Änderungen als Patches ablegen: \gitcmd{format-patch SINCE}
+  \item Patches einspielen: \gitcmd{am *.patch}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Notfallhilfe}
+
+  \onslide<+->
+
+  Manchmal ist das Repository in einem seltsamen Zustand, und nichts klappt mehr
+  … was tun?
+
+  \onslide<+->
+
+  \begin{center}
+    \Large\textcolor{red!80!black}{\textbf{DON'T PANIC!}}
+  \end{center}
+
+  \smallskip{}
+
+  \textbf{Alles, was in einem Commit gespeichert ist, ist sicher!}
+
+  \medskip{}
+
+  \begin{itemize}[<+->]
+  \item Erstmal einen Überblick bekommen: \gitcmd{status}
+  \item Unerwarteter Merge Conflict: \gitcmd{merge --abort}
+  \item \gitcmd{stash} zum Sichern von lokalen Änderungen
+  \item \gitcmd{fsck}, um das Repository zu prüfen
+  \item \gitcmd{reset HEAD}, \gitcmd{reset BRANCH}
+  \item \gitcmd{checkout commit path} zum selektiven Zurücksetzen (VORSICHT:
+    löscht lokale Änderungen!)
+  \item Allerletze Maßnahme: \gitcmd{reset --hard BRANCH} (VORSICHT: löscht
+    alle uncommitteten Änderungen!)
+  \end{itemize}
+
+\end{frame}
+
+
+\section{GitHub}
+
+\begin{frame}
+  \frametitle{Übersicht}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Populärer zentraler Dienst zum Hosting von Repositories
+  \item Gehört (mittlerweile) Microsoft
+  \item Hostet Clones vieler bekannter Projekte
+  \item Auch: Wikis, Webseiten, …
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Forking, Commenting, Pull Requests, …}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item \emph{Forking}: Cloning eines Repositories, mit Zusatzinformation über
+    das Ursprungsrepository
+  \item Commits in Forks können mit \emph{Pull Requests} in das
+    Ursprungsrepository gebracht werden
+  \item Umfangreiche Kommentarfunktion, Markdown-Syntax, Unterstützung bei
+    Lizenzwahl
+  \end{itemize}
+
+  \medskip{}
+
+  → mal praktisch anschauen
+
+\end{frame}
+
+\end{document}
