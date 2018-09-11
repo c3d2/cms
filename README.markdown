@@ -26,6 +26,9 @@ Vorrausetzungen:
 Installation unter zB. Debian:
 - $ sudo apt install make texlive texlive-latex-extra texlive-lang-german
 
+Installation unter Fedora:
+- $ sudo dnf install make texlive texlive-scheme-basic texlive-todonotes
+
 Genauer wird das im [Handbuch von GNU Make] beschrieben.
 <!-- Foliengenerator: https://github.com/c3d2/slidenado -->
 Die Weiterverwendung ist unter den Bedingungen der jeweiligen Lizenz gestattet.
