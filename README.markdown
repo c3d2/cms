@@ -27,7 +27,7 @@ Installation unter zB. Debian:
 - $ sudo apt install make texlive texlive-latex-extra texlive-lang-german inkscape
 
 Installation unter Fedora:
-- $ sudo dnf install make texlive texlive-scheme-basic texlive-todonotes inkscape
+- $ sudo dnf install make texlive texlive-scheme-basic texlive-todonotes texlive-babel-german inkscape
 
 Genauer wird das im [Handbuch von GNU Make] beschrieben.
 <!-- Foliengenerator: https://github.com/c3d2/slidenado -->
