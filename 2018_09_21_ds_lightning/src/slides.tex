@@ -1,0 +1,86 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Darmstadt}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage[shadow,colorinlistoftodos]{todonotes}
+\setbeamertemplate{footline}[frame number]
+
+\newcommand{\cc}[1]{\includegraphics[height=4mm]{img/#1.png}}
+\usepackage{ifthen}
+\newcommand{\license}[2][]{\\#2\ifthenelse{\equal{#1}{}}{}{\\\scriptsize\url{#1}}}
+\usepackage{textcomp}
+
+%\setbeamercovered{transparent}
+
+\pgfdeclareimage[height=.6cm]{c3d2logo}{./img/c3d2.pdf} 
+
+
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{main,foreground}
+\logo{\pgfputat{\pgfxy(-1,0)}{\pgfbox[center,base]{\pgfuseimage{c3d2logo}}}}
+
+
+\title{Chaos macht Schule}
+\author{Thammi}
+\date{21.09.2018}
+
+\begin{document}
+\maketitle
+
+\section*{Motivation}
+\subsection*{}
+
+\begin{frame}[t]
+	\frametitle{Unsere Ziele}
+	\begin{itemize}
+    \item<2-> Auf defizite in der Medienbildung hinweisen
+		\item<3-> .. und Unterstützen diese zu beheben
+		\item<4-> Unsere Themen in die Schule tragen
+	\end{itemize}
+\end{frame}
+
+\section*{Angebot}
+\subsection*{}
+
+\begin{frame}
+	\frametitle{Unsere Themen}
+	\begin{itemize}
+    \item Datenschutz
+		\item Überwachung
+		\item Soziale Netzwerke
+    \item Datensicherheit
+    \item Urheberrecht und (freie) Lizenzen
+		\item Technik demystifizieren
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Unsere Formate}
+	\begin{itemize}
+    \item<2-> Vorträge
+		\item<3-> Workshops
+		\item<4-> Elternabende
+    \item<5-> Weiterbildungen und Fachtage
+	\end{itemize}
+\end{frame}
+
+\section*{Mitmachen}
+\subsection*{}
+
+\begin{frame}
+	\frametitle{Mitmachen}
+	\begin{center}
+		\textbf{Kontakt: schule@c3d2.de \\
+    Web: https://c3d2.de/schule.html}
+	\end{center}
+	\begin{itemize}
+		\item<2-> Mitmachen
+		\item<3-> uns Einladen
+		\item<4-> weiter sagen
+	\end{itemize}
+\end{frame}
+
+\end{document}
